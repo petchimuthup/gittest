@@ -1,0 +1,535 @@
+2019/08/27 18:15:56 [info] [ub_data_migration] Step #6 was skipped successfully.
+2019/08/27 18:16:41 [info] [ub_data_migration] Start running step #2
+2019/08/27 18:16:41 [info] [ub_data_migration] [Processing][run] Step #2 migration completed with 2 Websites
+2019/08/27 18:16:42 [info] [ub_data_migration] [Processing][run] Step #2 migration completed with 2 Store Groups
+2019/08/27 18:16:42 [info] [ub_data_migration] [Processing][run] Step #2 migration completed with 2 Stores
+2019/08/27 18:16:43 [info] [ub_data_migration] Step #2 migration completed successfully
+2019/08/27 18:16:43 [info] [ub_data_migration] Step #2 migration completed successfully
+
+2019/08/27 18:16:45 [info] [ub_data_migration] Start running step #3
+2019/08/27 18:16:45 [info] [ub_data_migration] [Processing][run] Step #3 migration completed with 9 Attribute Sets
+2019/08/27 18:16:52 [info] [ub_data_migration] [Processing][run] Step #3 migration completed with 51 Attribute Groups
+2019/08/27 18:17:09 [info] [ub_data_migration] [Processing][run] Step #3 migration completed with 100 Attributes
+2019/08/27 18:17:53 [info] [ub_data_migration] [Processing][run] Step #3 migration completed with 8 Attributes
+2019/08/27 18:18:35 [info] [ub_data_migration] Step #3 migration completed successfully
+
+2019/08/27 18:18:49 [info] [ub_data_migration] [Start][run] step #4
+2019/08/27 18:18:50 [info] [ub_data_migration] [Processing][run] Step #4 migration completed with 8 Catalog Categories
+2019/08/27 18:18:50 [info] [ub_data_migration] Step #4 migration completed successfully
+
+2019/08/27 18:25:14 [info] [ub_data_migration] [Start][run] step #5
+2019/08/27 18:25:14 [info] [ub_data_migration] [Processing][run] Step #5 migration completed with 47 Products;
+2019/08/27 18:25:16 [info] [ub_data_migration] [Processing][run] Step #5 migration completed with 18 Product Links;
+2019/08/27 19:02:08 [info] [ub_data_migration] Step #8 was reset successfully
+2019/08/27 19:02:08 [info] [ub_data_migration] Step #7 was reset successfully
+2019/08/27 19:02:08 [info] [ub_data_migration] Step #6 was reset successfully
+2019/08/27 19:02:18 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:02:23 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:02:29 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:02:35 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:02:42 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:02:47 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:02:54 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:00 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:06 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:12 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:18 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:24 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:30 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:36 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:43 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:50 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:54 [info] [ub_data_migration] Resetting data migration in the step #5...
+2019/08/27 19:03:54 [info] [ub_data_migration] Step #5 was reset successfully
+2019/08/27 19:03:55 [info] [ub_data_migration] Resetting data migration in the step #4...
+2019/08/27 19:03:56 [info] [ub_data_migration] Step #4 was reset successfully
+2019/08/27 19:04:05 [info] [ub_data_migration] Resetting data migration in the step #3...
+2019/08/27 19:04:14 [info] [ub_data_migration] Resetting data migration in the step #3...
+2019/08/27 19:04:15 [info] [ub_data_migration] Resetting data migration in the step #3...
+2019/08/27 19:04:26 [info] [ub_data_migration] Resetting data migration in the step #3...
+2019/08/27 19:04:36 [info] [ub_data_migration] Resetting data migration in the step #3...
+2019/08/27 19:04:37 [info] [ub_data_migration] Resetting data migration in the step #3...
+2019/08/27 19:04:37 [info] [ub_data_migration] Step #3 was reset successfully
+2019/08/27 19:04:38 [info] [ub_data_migration] Resetting data migration in the step #2...
+2019/08/27 19:04:38 [info] [ub_data_migration] Step #2 was reset successfully
+2019/08/27 19:52:19 [info] [ub_data_migration] Start running step #2
+2019/08/27 19:52:19 [info] [ub_data_migration] 
+[Processing][run] Step #2 migration completed with 2 Websites
+2019/08/27 19:52:19 [info] [ub_data_migration] 
+[Processing][run] Step #2 migration completed with 2 Store Groups
+2019/08/27 19:52:20 [info] [ub_data_migration] 
+[Processing][run] Step #2 migration completed with 2 Stores
+2019/08/27 19:52:20 [info] [ub_data_migration] Step #2 migration completed successfully
+2019/08/27 19:52:20 [info] [ub_data_migration] Step #2 migration completed successfully
+
+2019/08/27 19:52:23 [info] [ub_data_migration] Start running step #3
+2019/08/27 19:52:23 [info] [ub_data_migration] 
+[Processing][run] Step #3 migration completed with 9 Attribute Sets
+2019/08/27 19:52:31 [info] [ub_data_migration] 
+[Processing][run] Step #3 migration completed with 51 Attribute Groups
+2019/08/27 19:52:50 [info] [ub_data_migration] 
+[Processing][run] Step #3 migration completed with 100 Attributes
+2019/08/27 19:53:32 [info] [ub_data_migration] 
+[Processing][run] Step #3 migration completed with 8 Attributes
+2019/08/27 19:54:17 [info] [ub_data_migration] Step #3 migration completed successfully
+
+2019/08/27 19:54:35 [info] [ub_data_migration] [Start][run] step #4
+2019/08/27 19:54:35 [info] [ub_data_migration] 
+[Processing][run] Step #4 migration completed with 8 Catalog Categories
+2019/08/27 19:54:35 [info] [ub_data_migration] Step #4 migration completed successfully
+
+2019/08/27 20:03:31 [info] [ub_data_migration] [Start][run] step #5
+2019/08/27 20:03:31 [info] [ub_data_migration] 
+[Processing][run] Step #5 migration completed with 47 Products;
+2019/08/27 20:03:34 [info] [ub_data_migration] 
+[Processing][run] Step #5 migration completed with 18 Product Links;
+2019/08/27 20:03:35 [info] [ub_data_migration] Step #5 migration completed successfully
+
+2019/08/27 20:03:35 [info] [ub_data_migration] [Start][run] step #6
+2019/08/27 20:03:36 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 5 Customer Groups;
+2019/08/27 20:04:18 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:05:02 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:05:43 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:06:25 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:07:08 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:07:48 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:08:24 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:09:01 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:09:38 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:10:15 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:10:51 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:11:27 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:12:04 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:12:41 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:13:16 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:13:53 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:14:29 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:15:05 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:15:44 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:16:42 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:17:29 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 100 Customers
+2019/08/27 20:17:55 [info] [ub_data_migration] 
+[Processing][run] Step #6 migration completed with 56 Customers
+2019/08/27 20:17:55 [info] [ub_data_migration] Step #6 migration completed successfully
+
+2019/08/27 20:18:05 [info] [ub_data_migration] [Start][run] step #7
+2019/08/27 20:18:05 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 7 Sales Rules;
+2019/08/27 20:18:06 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 10 Sales Order Statuses;
+2019/08/27 20:23:03 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 20:29:08 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 20:35:25 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 20:41:30 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 20:47:11 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 20:52:55 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 20:58:38 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 21:04:02 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 21:09:22 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 21:14:54 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 21:21:02 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 21:26:31 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 21:32:24 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 21:38:02 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 21:43:27 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 21:48:41 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 Sales Orders;
+2019/08/27 21:50:00 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 24 Sales Orders;
+2019/08/27 21:51:10 [error] [ub_data_migration] Mage2SalesQuote: Items Qty is too long (maximum is 12 characters).
+- Base Subtotal With Discount is too long (maximum is 12 characters).
+2019/08/27 21:51:11 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:51:13 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 3 Rating items;
+2019/08/27 21:51:13 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:51:14 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 4 TaxClass items;
+2019/08/27 21:51:14 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:51:26 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:51:26 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:51:38 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:51:38 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:51:50 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:51:50 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:52:03 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:52:03 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:52:15 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:52:15 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:52:27 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:52:27 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:52:38 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:52:38 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:52:49 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:52:49 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:53:01 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:53:01 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:53:12 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:53:12 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:53:23 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:53:23 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:53:34 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:53:34 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:53:46 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:53:46 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:53:57 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:53:57 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:54:09 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:54:09 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:54:19 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:54:19 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:54:31 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:54:31 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:54:42 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:54:42 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:54:53 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:54:53 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:55:04 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 TaxCalculationRate items;
+2019/08/27 21:55:04 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:55:14 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 94 TaxCalculationRate items;
+2019/08/27 21:55:14 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:57:29 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 2 TaxCalculationRule items;
+2019/08/27 21:57:29 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:57:30 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 2 TaxOrderAggregatedCreated items;
+2019/08/27 21:57:30 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:57:31 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 2 TaxOrderAggregatedUpdated items;
+2019/08/27 21:57:31 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:57:31 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 2 EmailTemplate items;
+2019/08/27 21:57:31 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:57:43 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:57:43 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:57:54 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:57:54 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:58:06 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:58:06 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:58:17 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:58:17 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:58:28 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:58:28 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:58:40 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:58:40 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:58:51 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:58:51 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:59:03 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:59:03 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:59:14 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:59:14 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:59:25 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:59:25 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:59:37 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:59:37 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:59:48 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:59:48 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 21:59:59 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 21:59:59 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 22:00:10 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 22:00:10 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 22:00:22 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 22:00:22 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 22:00:33 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 22:00:33 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 22:00:45 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 22:00:45 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 22:00:56 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 22:00:56 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 22:01:07 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 100 NewsletterSubscriber items;
+2019/08/27 22:01:07 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 22:01:13 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 56 NewsletterSubscriber items;
+2019/08/27 22:01:13 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 22:01:15 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 1 NewsletterTemplate items;
+2019/08/27 22:01:15 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 22:01:16 [info] [ub_data_migration] 
+[Processing][run] Step #8 migration completed with 4 EAVEntityStore items;
+2019/08/27 22:01:16 [info] [ub_data_migration] [Start][run] step #8
+2019/08/27 22:01:17 [info] [ub_data_migration] Step #8 migration completed successfully
+
+2019/08/28 12:07:31 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:09:35 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:11:16 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:12:44 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:14:40 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:16:09 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:17:25 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:18:46 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:20:11 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:21:37 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:22:57 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:24:38 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:26:15 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:27:59 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:29:30 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:31:46 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:34:28 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:37:24 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:39:28 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:41:45 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:43:57 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:46:30 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:47:56 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:48:30 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:48:59 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:49:30 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:50:02 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:50:30 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:50:56 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:51:21 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:51:47 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:52:16 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:52:41 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:53:04 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:53:29 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:53:53 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:54:16 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:54:43 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:55:11 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:55:38 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:56:04 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:56:31 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:56:57 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:57:38 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:58:37 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:59:18 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 12:59:51 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:00:57 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:02:29 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:03:54 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:04:56 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:05:22 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:05:48 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:06:18 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:06:49 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:07:19 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:07:44 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:08:10 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:08:44 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:09:37 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:10:17 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:11:04 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:11:54 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:12:31 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:13:06 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:13:40 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:14:13 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:14:50 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:15:28 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 active quotes
+2019/08/28 13:15:45 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 30 active quotes
+2019/08/28 13:15:47 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 28 SalesOrderAggregatedCreated items;
+2019/08/28 13:15:49 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 24 SalesOrderAggregatedUpdated items;
+2019/08/28 13:15:50 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 12 SalesOrderAggregatedUpdated items;
+2019/08/28 13:15:52 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 10 SalesRefundedAggregatedOrder items;
+2019/08/28 13:15:53 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 12 SalesInvoicedAggregated items;
+2019/08/28 13:15:54 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 12 SalesInvoicedAggregatedOrder items;
+2019/08/28 13:15:56 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 12 SalesShippingAggregated items;
+2019/08/28 13:15:58 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 16 SalesShippingAggregatedOrder items;
+2019/08/28 13:16:04 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 SalesBestsellersDaily items;
+2019/08/28 13:16:10 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 SalesBestsellersDaily items;
+2019/08/28 13:16:17 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 SalesBestsellersDaily items;
+2019/08/28 13:16:22 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 64 SalesBestsellersDaily items;
+2019/08/28 13:16:28 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 100 SalesBestsellersMonthly items;
+2019/08/28 13:16:37 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 96 SalesBestsellersMonthly items;
+2019/08/28 13:16:42 [info] [ub_data_migration] 
+[Processing][run] Step #7 migration completed with 76 SalesBestsellersYearly items
+2019/08/28 13:16:43 [info] [ub_data_migration] Step #7 migration completed successfully
+
+2019/08/28 15:12:50 [info] [ub_data_migration] Start running step #2
+2019/08/28 15:12:50 [info] [ub_data_migration] 
+[Processing][delta] Step #2 migration completed with 2 Websites
+2019/08/28 15:12:51 [info] [ub_data_migration] 
+[Processing][delta] Step #2 migration completed with 2 Store Groups
+2019/08/28 15:12:51 [info] [ub_data_migration] 
+[Processing][delta] Step #2 migration completed with 2 Stores
+2019/08/28 15:12:51 [info] [ub_data_migration] Step #2 migration completed successfully
+2019/08/28 15:12:51 [info] [ub_data_migration] Step #2 migration completed successfully
+
+2019/08/28 15:13:36 [info] [ub_data_migration] [Start][delta] step #5
+2019/08/28 15:13:37 [info] [ub_data_migration] 
+[Processing][delta] Step #5 migration completed with 18 Product Links;
+2019/08/28 15:13:37 [info] [ub_data_migration] [Start][delta] step #5
+2019/08/28 15:13:38 [info] [ub_data_migration] Step #5 migration completed successfully
+
+2019/08/28 15:14:02 [info] [ub_data_migration] [Start][delta] step #7
+2019/08/28 15:14:02 [info] [ub_data_migration] 
+[Processing][delta] Step #7 migration completed with 7 Sales Rules;
+2019/08/28 15:14:04 [info] [ub_data_migration] 
+[Processing][delta] Step #7 migration completed with 10 Sales Order Statuses;
+2019/08/28 15:14:05 [info] [ub_data_migration] Step #7 migration completed successfully
+
+2019/08/28 15:17:30 [info] [ub_data_migration] Start running step #2
+2019/08/28 15:17:30 [info] [ub_data_migration] 
+[Processing][delta] Step #2 migration completed with 2 Websites
+2019/08/28 15:17:30 [info] [ub_data_migration] 
+[Processing][delta] Step #2 migration completed with 2 Store Groups
+2019/08/28 15:17:31 [info] [ub_data_migration] 
+[Processing][delta] Step #2 migration completed with 2 Stores
+2019/08/28 15:17:31 [info] [ub_data_migration] Step #2 migration completed successfully
+2019/08/28 15:17:31 [info] [ub_data_migration] Step #2 migration completed successfully
+
+2019/08/28 15:20:17 [info] [ub_data_migration] Step #2 migration completed successfully
+2019/08/28 15:20:17 [info] [ub_data_migration] Step #2 migration completed successfully
+
