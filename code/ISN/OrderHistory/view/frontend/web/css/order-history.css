@@ -1,0 +1,156 @@
+/*Order History page*/
+.invoicesContainerDiv01 {
+    float: left;
+    padding: 0px;
+    width: 250px;
+    margin: 0;
+}
+.invoicesSearchText,
+.backOrdersSearchText {
+    background: none repeat scroll 0 0 #FFFFFF;
+    float: left;
+    height: 20px;
+    padding: 2px;
+    border: 0 none;
+    outline: 0 none;
+    width: 190px;
+}
+.invoicesSearchButton,
+.backOrdersSearchButton {
+    float: left;
+    background: #eaeaea;
+    border: 1px solid #ccc;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.invoicesSearchButton:hover,
+.backOrdersSearchButton:hover {
+    background: #ccc;
+}
+#invoicesSearchText,
+#backOrdersSearchText {
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    border: 1px solid #ccc;
+}
+.invoicesFadeThis {
+    background-color: #F0F0F0;
+    height: 115px;
+    padding: 15px;
+}
+.invoicesLabel {
+    width: 100px;
+    float: left;
+}
+.invoicesOrderNumberContainer {
+    float: left;
+}
+.ordersContainerDiv01 {
+    float: left;
+    padding: 0px;
+    width: 250px;
+    margin: 0;
+}
+.k-grouping-header {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.ordersSearchText {
+    background: none repeat scroll 0 0 #FFFFFF;
+    float: left;
+    height: 20px;
+    padding: 2px;
+    border: 0 none;
+    outline: 0 none;
+    width: 190px;
+}
+.empty-grid {
+    height: 200px;
+}
+.ordersSearchButton {
+    float: left;
+    background: #eaeaea;
+    border: 1px solid #ccc;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.ordersSearchButton:hover {
+    background: #ccc;
+}
+#ordersSearchText {
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    border: 1px solid #ccc;
+}
+.ordersFadeThis {
+    background-color: #F0F0F0;
+    padding: 15px;
+}
+.ordersLabel {
+    width: 100px;
+    float: left;
+}
+.creditsContainerDiv01 {
+    float: left;
+    padding: 0px;
+    width: 250px;
+    margin: 0;
+}
+.k-grouping-header {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.creditsSearchText {
+    background: none repeat scroll 0 0 #FFFFFF;
+    float: left;
+    height: 20px;
+    padding: 2px;
+    border: 0 none;
+    outline: 0 none;
+    width: 190px;
+}
+.empty-grid {
+    height: 200px;
+}
+.creditsSearchButton {
+    float: left;
+    background: #eaeaea;
+    border: 1px solid #ccc;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.creditsSearchButton:hover {
+    background: #ccc;
+}
+#creditsSearchText {
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    border: 1px solid #ccc;
+}
+.creditsFadeThis {
+    background-color: #F0F0F0;
+    height: 115px;
+    padding: 15px;
+}
+.creditsLabel {
+    width: 100px;
+    float: left;
+}

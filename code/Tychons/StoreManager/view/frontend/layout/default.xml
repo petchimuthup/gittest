@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<head>
+  <link src="Tychons_StoreManager::js/storeselect.js"/>
+</head> 
+    <body>
+        <referenceContainer name="header-wrapper">
+            <block class="Tychons\StoreManager\Block\StoreList" before="top.search" name="store.select" as="store.select" template="Tychons_StoreManager::store/storeswitch.phtml" cacheable="false"/>
+        </referenceContainer>
+        <referenceBlock name="header.links">
+            <block class="Tychons\StoreManager\Block\Link\CompanyLink" name="company_link" >
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Company</argument>
+                    <argument name="path" xsi:type="string">company/store/user</argument>
+                </arguments>
+            </block>
+	 
+          <block class="Tychons\StoreManager\Block\Link\UserAccount" name="my-account-link" >
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Account</argument>
+                    <argument name="path" xsi:type="string">customer/account</argument>
+                </arguments>
+            </block>
+ 
+	    <block class="Tychons\StoreManager\Block\Link\Support" name="support_link" >
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Support</argument>
+                    <argument name="path" xsi:type="string">support</argument>
+                </arguments>
+              </block>
+
+        </referenceBlock>
+        <referenceBlock name="customer" remove="true"/>
+        <referenceBlock name="company.link" remove="true"/>
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true" />
+        <referenceBlock name="category.product.addto.compare" remove="true"/>
+        <referenceBlock name="catalogsearch.product.addto.compare" remove="true"/>
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="category.product.addto.compare" remove="true"/>
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="related.product.addto.compare" remove="true"/>
+        <referenceBlock name="upsell.product.addto.compare" remove="true"/>
+        <referenceBlock name="upsell.product.addto.compare" remove="true"/>
+        <referenceBlock name="crosssell.product.addto.compare" remove="true" />
+    </body>
+</page>

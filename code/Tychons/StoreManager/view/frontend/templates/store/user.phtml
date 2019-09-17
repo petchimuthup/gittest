@@ -1,0 +1,246 @@
+<div class="store-schedule">
+    <form action="" method="POST" name="sch_action">
+    <div class="table-wrapper storeuser">
+    <?php
+
+    $logedStore = $block->userStoreId();
+
+    $ActiveStore = $block->userStoreList();
+
+    $userRole = $block->getUserRole(); 
+
+    $user = $block->getUsers();
+
+    $websiteId = $block->getWebsiteId();
+
+    $record = count($user);
+
+    ?>
+
+    <?php if($record >=1) { ?>
+    <table id="storeuser-table" class="data table table-storeuser">
+        <caption class="table-caption"><?= /* @escapeNotVerified */ __('Store User') ?></caption>
+            <?php foreach ($user as $key => $store) :?>
+            <td class="set-store-list" id="store-<?php echo $store['entity_id']; ?>">
+                <span class="store-expand expand-store-<?php echo $store['entity_id']; ?>">+</span>
+                <p class="store-name"><?php echo $store['company_name']; ?></p>   
+            </td>
+            <tbody height="30%" class="store-<?php echo $store['entity_id']; ?> make-hide" style="display: none;">
+            <tr>
+                <th scope="col" class="col id"><?= /* @escapeNotVerified */ __('ID') ?></th>
+                <th scope="col" class="col name"><?= /* @escapeNotVerified */ __('Name') ?></th>
+                <th scope="col" class="col email"><?= /* @escapeNotVerified */ __('Email') ?></th>
+                <th scope="col" class="col role"><?= /* @escapeNotVerified */ __('Role') ?></th>
+                <th scope="col" class="col status"><?= /* @escapeNotVerified */ __('Status') ?></th>
+                <th scope="col" class="col action"><?= /* @escapeNotVerified */ __('Action') ?></th>
+            </tr>
+            <?php foreach ($store['user'] as $keys => $user): 
+
+                if ($user['role_id'] == 1) {
+                    
+                    $roleName = "Admin";
+
+                }elseif ($user['role_id'] == 2) {
+                    
+                    $roleName = "Manager";
+
+                }else{
+
+                    $roleName = "Employee";
+                }
+
+                $userStore = json_encode($user['userstore_id']);
+            ?>
+            <tr height="30%">
+                <td class="col id" user_id="<?php echo $user['entity_id']; ?>">
+                    <label for="user-id" class="label"><span><?php echo $user['entity_id']; ?></span></label>
+                </td>
+                <td class="col name" firstname="<?php echo $user['firstname']; ?>" lastname="<?php echo $user['lastname']; ?>">
+                    <label for="user-name" class="label"><span id="name"><?php echo $user['firstname'].' '.$user['lastname']; ?></span></label>
+                </td>
+                <td class="col email" email="<?php echo $user['email']; ?>">
+                    <label for="user-email" class="label"><span id="firstname"><?php echo $user['email']; ?></span></label>
+                </td>
+                <td class="col role" role="<?php echo $user['role_id']; ?>">
+                    <label for="user-role" class="label"><span><?php echo $roleName; ?></span></label>
+                </td>
+                <td class="col status" status="<?php echo $user['user_status']; ?>">
+                    <label for="user-status" class="label"><span>
+                        <?php echo $user['user_status'] ? 'Active' : 'Inactive'; ?>
+                        </span></label>
+                </td>
+
+                <td class="col user-action">
+                    <?php if ($userRole == 1 || ($user['role_id'] != 1 && $userRole == 2)): ?>
+                    <a for="user-edit" password="<?php echo $user['password']; ?>" conf_password="<?php if (isset($user['conf_password'])): ?><?php echo $user['conf_password']; ?>  <?php endif; ?>" role-id="<?php echo $userRole; ?>" store-id='<?php echo $userStore ?>' class="action user-edit"  data-action="action-edit" data-mobile-label="<?= /* @noEscape */ $block->escapeHtml(__('Edit')) ?>" data-trigger="add-update-user">
+                        <span>Edit</span>
+                    </a>
+                    <?php endif; ?>
+                    <?php if ($userRole != 2): ?>
+                    <a for="user-delete" user-id="<?php echo $user['entity_id']; ?>" store-id="<?php echo $store['entity_id']; ?>" class="action user-delete" data-action="action-delete"><span>Delete</span></a>
+                    <?php endif; ?>
+                </td>
+
+            </tr>
+             <?php endforeach; ?>
+            </tbody>
+             <?php endforeach; ?>
+    </table>
+    <?php }else{ ?>
+
+        <div class="not-found">No User found</div>
+
+    <?php } ?>
+    <div class="actions">
+        <button type="button"
+                title="<?= $block->escapeHtml(__('Add New User')) ?>"
+                class="action primary add-new-usr"
+                data-trigger="add-update-user"
+                data-mage-init='{"Magento_Company/js/user-edit":{"gridProvider":"company_users_listing.company_users_listing_data_source"}}'
+                data-mobile-label="<?= /* @noEscape */ $block->escapeHtml(__('Add New User')) ?>">
+            <span><?= $block->escapeHtml(__('Add New User')) ?></span>
+        </button>
+    </div>
+</form>
+ </div>
+</div>
+
+<div data-bind="mageInit: {
+        'Magento_Ui/js/modal/modal':{
+            'type': 'popup',
+            'title': 'Add/Update user',
+            'trigger': '[data-trigger=add-update-user]',
+            'responsive': true,
+        }}">
+<div class="content" >
+<?php /** @var $block Tychons\StoreManager\Block\User\Store */ ?>
+<form class="form form-add-storeuser" method="post" id="add-storeuser-form"
+      action="<?= $block->escapeUrl($block->getUrl('company/store/addupdate')) ?>"
+      data-mage-init='{"validation":{}}'>
+    <input type="hidden" name="target_id" />
+    <input type="hidden" name="customer_id" id="customer_id"/>
+    <fieldset class="fieldset info">
+        <div class="field firstname required">
+            <label class="label" for="firstname">
+                <span><?= $block->escapeHtml(__('First Name')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text" name="firstname" id="firstname" value=""
+                       title="<?= $block->escapeHtml(__('First Name')) ?>"
+                       class="input-text firstname" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field lastname required">
+            <label class="label" for="lastname">
+                <span><?= $block->escapeHtml(__('Last Name')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text" name="lastname" id="lastname" value=""
+                       title="<?= $block->escapeHtml(__('Last Name')) ?>"
+                       class="input-text" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email">
+                <span><?= $block->escapeHtml(__('Email')) ?></span>
+            </label>
+            <div class="control">
+                <input type="email" name="email" id="email" website_id="<?= $websiteId; ?>" value=""
+                       title="<?= $block->escapeHtml(__('Email')) ?>"
+                       data-role="email"
+                       class="input-text" data-validate="{required:true, 'validate-email':true}">
+            </div>
+        </div>
+        <div class="field select-store required">
+            <label class="label" for="select-store">
+                <span><?= $block->escapeHtml(__('Assign Store')) ?></span>
+            </label>
+            <div class="control">
+                <select data-store="select-store" name="store_id[]" class="store_id" id="store_id" multiple="multiple">
+                    <?php foreach ($ActiveStore as $key => $store) :?>
+                    <option value="<?php echo $store['entity_id']; ?>"><?php echo $store['company_name']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+        <div class="field role required">
+            <label class="label" for="jobtitle">
+                <span><?= $block->escapeHtml(__('User Role')) ?></span>
+            </label>
+            <div class="control">
+                <select data-role="role-select" name="role" id="role">
+                        <!-- <?php if ($userRole != 2) { ?> <option value="1">Admin</option> <?php } ?>
+                        <?php if ($userRole != 2) { ?> <option value="2">Manager</option><?php } ?> -->
+                        <option value="2">Manager</option>
+                        <option value="3">Employee</option>
+                </select>
+            </div>
+        </div>
+<!--         <div class="field default_location required">
+            <label class="label" for="default_location">
+                <span><?= $block->escapeHtml(__('Default Location')) ?></span>
+            </label>
+            <div class="control">
+                <select data-role="location-select" name="default_location" id="default_location">
+                        <option value="Com001">Com001</option>
+                        <option value="com001">com001</option>
+                        <option value="com003">com003</option>
+                </select>
+            </div>
+        </div> -->
+        <div class="field password required">
+            <label class="label" for="telephone">
+                <span><?= $block->escapeHtml(__('Password')) ?></span>
+            </label>
+            <div class="control">
+                <input type="password" name="password" id="password" value=""
+                       title="<?= $block->escapeHtml(__('Password')) ?>"
+                       class="input-text" data-validate="{required:true}">
+                    <span class="pwd-shwhd" style="display: none;">show</span>
+            </div>
+        </div>
+        <div class="field confirmpassword required">
+            <label class="label" for="confirmpassword">
+                <span><?= $block->escapeHtml(__('Confirm Password')) ?></span>
+            </label>
+            <div class="control">
+                <input type="password" name="conf_password" id="conf_password" value=""
+                       title="<?= $block->escapeHtml(__('Confirm Password')) ?>"
+                       class="input-text" data-validate="{required:true, equalTo:'#password'}">
+                 <span class="cpwd-shwhd" style="display: none;">show</span>
+            </div>
+        </div>
+        <div class="field status">
+            <label class="label" for="status">
+                <span><?= $block->escapeHtml(__('Status')) ?></span>
+            </label>
+            <div class="control">
+                <select data-role="status-select" name="status" id="status">
+                    <option value="1"><?= $block->escapeHtml(__('Active')) ?></option>
+                    <option value="0"><?= $block->escapeHtml(__('Inactive')) ?></option>
+                </select>
+            </div>
+        </div>
+        <div class="success-msg"></div>
+    </fieldset>
+   <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary user-submit" title="<?php  echo __('Submit') ?>"><span><?php echo __('Submit') ?></span></button>
+            <button class="action cancel secondary" type="button" data-role="action"><span>Cancel</span></button>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "#add-storeuser-form": {
+            "validation": {}
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    var userRole = "<?php echo $userRole; ?>";
+</script>
+

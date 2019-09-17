@@ -1,0 +1,50 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/accountPayments/" method="GET">
+        <service class="ISN\PaymentAccount\Api\CreditLimitRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Magento_Company::credit_history"/>
+        </resources>
+    </route>
+    <route url="/V1/accountPayments/:creditId" method="GET">
+        <service class="ISN\PaymentAccount\Api\CreditLimitRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="Magento_Company::credit_history"/>
+        </resources>
+    </route>
+    <route url="/V1/accountPayments/:id" method="PUT">
+        <service class="ISN\PaymentAccount\Api\CreditLimitRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Magento_Company::credit_history"/>
+        </resources>
+    </route>
+    <route url="/V1/accountPayments/company/:companyId" method="GET">
+        <service class="ISN\PaymentAccount\Api\CreditLimitManagementInterface" method="getCreditByCompanyId"/>
+        <resources>
+            <resource ref="Magento_Company::credit_history"/>
+        </resources>
+    </route>
+    <route url="/V1/accountPayments/:creditId/increaseBalance" method="POST">
+        <service class="ISN\PaymentAccount\Api\CreditBalanceManagementInterface" method="increase"/>
+        <resources>
+            <resource ref="Magento_Company::credit_history"/>
+        </resources>
+    </route>
+    <route url="/V1/accountPayments/:creditId/decreaseBalance" method="POST">
+        <service class="ISN\PaymentAccount\Api\CreditBalanceManagementInterface" method="decrease"/>
+        <resources>
+            <resource ref="Magento_Company::credit_history"/>
+        </resources>
+    </route>
+    <route url="/V1/accountPayments/history" method="GET">
+        <service class="ISN\PaymentAccount\Api\CreditHistoryManagementInterface" method="getList"/>
+        <resources>
+            <resource ref="Magento_Company::credit_history"/>
+        </resources>
+    </route>
+    <route url="/V1/accountPayments/history/:historyId" method="PUT">
+        <service class="ISN\PaymentAccount\Api\CreditHistoryManagementInterface" method="update"/>
+        <resources>
+            <resource ref="Magento_Company::credit_history"/>
+        </resources>
+    </route>
+</routes>

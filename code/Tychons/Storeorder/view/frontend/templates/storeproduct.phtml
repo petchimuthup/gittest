@@ -1,0 +1,256 @@
+
+<?php
+
+$orderproduct = $block->getOrderedProduct();
+
+$loggedCustomer = $block->getCustomerId();
+
+$schedule = $block->getSchedules();
+
+if(isset($schedule) && !empty($schedule)){
+
+    $days = explode(",",$schedule['days_week']);
+
+    $ucdays = array_map('ucfirst', $days);
+
+    $ucdays = implode(",",$ucdays);
+}
+
+$productCollection = $block->getStoreProduct();
+
+$activeStoreId = $block->getPresentStoreId();
+
+$porequiredcheck = $block->checkPoRequired();
+
+$presentUserProduct = $block->getLoggedUserProduct();
+
+echo $userRole = $block->getActiveUserRole();
+
+?>
+<div class="store-scheduler">
+	<p class="store-content">
+		<?php if ($schedule): ?>
+		<span class="store-txt">
+			This order will automatically process at <?= /* @escapeNotVerified */ $schedule['time'] ?> on <?= /* @escapeNotVerified */ $ucdays ?>. This order will be shipped to the default store address. Please contact the store manager for questions about the store order schedule.
+		</span>
+		 <?php else: ?>
+		 <span class="store-txt">
+			Store order not scheduled please contact store Admin or Manager.
+		 </span>
+		<?php endif; ?>
+		
+	</p>
+</div>
+<?php if ($productCollection || $presentUserProduct): ?>
+<div class="products wrapper products-grid">
+    <ol class="products grid items product-items">
+        <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
+        <?php foreach ($presentUserProduct as $products): ?>
+        <div class="user-name"><?= /* @escapeNotVerified */ $products['user_name'] ?></div>
+        <?php foreach ($products['products'] as $_product): ?>
+        <li class="item product product-item">
+            <div class="product-item-info" data-container="product-grid">
+                <?php if ($products['customer_id'] == $loggedCustomer ): ?>
+                <div class="del-product" post-url ="<?= /* @escapeNotVerified */ $block->getUrl("storeorder/index/productdelete"); ?>" product-id = "<?= /* @escapeNotVerified */ $_product['productid'] ?>"  item-id = "<?= /* @escapeNotVerified */ $products['entity_id'] ?>" > <img class="delete-img" 
+                    src="<?= /* @escapeNotVerified */ $block->getUrl("pub/media")."delete.png"; ?>"> </div>
+                <?php endif; ?>
+                <a href="<?= /* @escapeNotVerified */ $_product['product_url'] ?>" class="product photo product-item-photo" tabindex="-1">
+                    <span class="product-image-container" style="width:240px;">
+                    <span class="product-image-wrapper" style="padding-bottom: 125%;">
+                        <img class="product-image-photo" src="<?= /* @escapeNotVerified */ $_product['image'] ?>" max-width="240" max-height="300" alt="<?= /* @escapeNotVerified */ $_product['name'] ?>">
+                    </span>
+                    </span>
+                </a>
+                <div class="product details product-item-details">
+                    <strong class="product name product-item-name">
+                        <a class="product-item-link"
+                           href="<?= /* @escapeNotVerified */ $_product['product_url'] ?>">
+                           <?= /* @escapeNotVerified */ $_product['name'] ?>
+                        </a>
+                    </strong>
+                    <div class="price-box price-final_price" data-role="priceBox" data-product-id="<?= /* @escapeNotVerified */ $_product['productid'] ?>" data-price-box="product-id-<?= /* @escapeNotVerified */ $_product['productid'] ?>">
+                    <span class="price-container price-final_price tax weee">
+                    <span id="product-price-<?= /* @escapeNotVerified */ $_product['productid'] ?>" class="price-wrapper ">
+                        <span class="price"><?= /* @escapeNotVerified */ $_product['price'] ?></span>
+                    </span>
+                    </span>
+                    </div>
+                    <?php if (isset($orderproduct[$_product['productid']])): ?>
+                    <div class="last-purchased-date">
+                        <span class="last-pur-span">Last Purchased Date :</span>
+                        <span id="last-pur-dat"><?= /* @escapeNotVerified */ $orderproduct[$_product['productid']] ?></span>
+                    </div>
+                    <?php else: ?>
+                    <div class="last-purchased-date">
+                        <span class="last-pur-span">Last Purchased Date :</span>
+                        <span id="last-pur-dat">Not available</span>
+                    </div>    
+                    <?php endif; ?>
+                    <?php if ($products['customer_id'] == $loggedCustomer ): ?>
+                    <?php if ($porequiredcheck == 1 ): ?>
+                    <div class="po-order-no">
+                        <span class="po-number">PO Number :</span>
+                            <input type="text" name="po_number" class="po_number"
+                            <?php if (isset($_product['po_number']) && !empty($_product['po_number'])) { ?>
+                                value="<?= /* @escapeNotVerified */ $_product['po_number'] ?>"
+                           <?php } ?> >
+                    </div>
+                    <?php endif; ?>
+                    <div class="qty-plus-min">
+                        <span class="qty-txt">Qty :</span>
+                        <input type="text" maxlength="12" min="1" value="<?= /* @escapeNotVerified */ $_product['qty'] ?>" title="Qty" class="input-text qty" data-validate="null">
+                        <button class="qty-right">+</button>
+                        <button class="qty-left">-</button>
+                        <div class="show-error"></div>
+                    </div>
+                    <?php endif; ?>
+                    <div class="product-item-inner">
+                        <div class="product actions product-item-actions">
+                            <div class="actions-primary">
+                                  <input type="button" value="Update" id="upd-<?= /* @escapeNotVerified */ $_product['productid'] ?>" product_name="<?= /* @escapeNotVerified */ $_product['name'] ?>" class="qty-update" product-id = "<?= /* @escapeNotVerified */ $_product['productid'] ?>"  item-id = "<?= /* @escapeNotVerified */ $products['entity_id'] ?>" style="display:none;">
+                            </div>
+                            <?php if ($products['customer_id'] == $loggedCustomer ): ?>
+                            <div class="actions-primary">
+                                    <form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product['sku']) ?>" action="<?= /* @NoEscape */ $_product['addtocart'] ?>" method="post">
+                                        <input type="hidden" name="product" value="<?= /* @escapeNotVerified */ $_product['productid'] ?>">
+                                        <?= $block->getBlockHtml('formkey') ?>
+                                        <button type="submit" product_name="<?= /* @escapeNotVerified */ $_product['name'] ?>" id="moved-<?= /* @escapeNotVerified */ $_product['productid'] ?>" product_id ="<?= /* @escapeNotVerified */ $_product['productid'] ?>" item_id="<?= /* @escapeNotVerified */ $products['entity_id'] ?>"
+                                                title="<?= $block->escapeHtml(__('Move to Rush Order')) ?>"
+                                                class="action tocart primary moveto-rush">
+                                            <span><?= /* @escapeNotVerified */ __('Move to Rush Order') ?></span>
+                                        </button>
+                                    </form>
+                            </div>
+<!--                             <div class="actions-primary">
+                                    <form data-role="fav-form" data-product-sku="<?= $block->escapeHtml($_product['sku']) ?>" action="<?= /* @NoEscape */ $_product['addtocart'] ?>" method="post">
+                                        <input type="hidden" name="product" value="<?= /* @escapeNotVerified */ $_product['productid'] ?>">
+                                        <?= $block->getBlockHtml('formkey') ?>
+                                        <button type="submit"
+                                                title="<?= $block->escapeHtml(__('Add to Favorite')) ?>"
+                                                class="action tocart primary">
+                                            <span><?= /* @escapeNotVerified */ __('Add to Favorite') ?></span>
+                                        </button>
+                                    </form>
+                            </div> -->
+                            <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <?php endforeach; ?>
+        <?php endforeach; ?>
+        <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
+        <?php foreach ($productCollection as $products): ?>
+        <div class="user-name"><?= /* @escapeNotVerified */ $products['user_name'] ?></div>
+        <?php foreach ($products['products'] as $_product): ?>
+        <li class="item product product-item">
+            <div class="product-item-info" data-container="product-grid">
+            	<?php if ($userRole == 1 || $userRole == 2): ?>
+            	<div class="del-product" post-url ="<?= /* @escapeNotVerified */ $block->getUrl("storeorder/index/productdelete"); ?>" product-id = "<?= /* @escapeNotVerified */ $_product['productid'] ?>"  item-id = "<?= /* @escapeNotVerified */ $products['entity_id'] ?>" > <img class="delete-img" src="http://store.tychons.com/pub/media/delete.png"> </div>
+            	<?php endif; ?>
+                <a href="<?= /* @escapeNotVerified */ $_product['product_url'] ?>" class="product photo product-item-photo" tabindex="-1">
+                    <span class="product-image-container" style="width:240px;">
+                    <span class="product-image-wrapper" style="padding-bottom: 125%;">
+                        <img class="product-image-photo" src="<?= /* @escapeNotVerified */ $_product['image'] ?>" max-width="240" max-height="300" alt="<?= /* @escapeNotVerified */ $_product['name'] ?>">
+                    </span>
+                    </span>
+                </a>
+                <div class="product details product-item-details">
+                    <strong class="product name product-item-name">
+                        <a class="product-item-link"
+                           href="<?= /* @escapeNotVerified */ $_product['product_url'] ?>">
+                           <?= /* @escapeNotVerified */ $_product['name'] ?>
+                        </a>
+                    </strong>
+                    <div class="price-box price-final_price" data-role="priceBox" data-product-id="<?= /* @escapeNotVerified */ $_product['productid'] ?>" data-price-box="product-id-<?= /* @escapeNotVerified */ $_product['productid'] ?>">
+                    <span class="price-container price-final_price tax weee">
+                    <span id="product-price-<?= /* @escapeNotVerified */ $_product['productid'] ?>" class="price-wrapper ">
+                        <span class="price"><?= /* @escapeNotVerified */ $_product['price'] ?></span></span>
+                    </span>
+                    </div>
+                    <?php if (isset($orderproduct[$_product['productid']])): ?>
+                        <div class="last-purchased-date">
+                            <span class="last-pur-span">Last Purchased Date :</span>
+                            <span id="last-pur-dat"><?= /* @escapeNotVerified */ $orderproduct[$_product['productid']] ?></span>
+                        </div>
+                    <?php else: ?>
+                        <div class="last-purchased-date">
+                            <span class="last-pur-span">Last Purchased Date :</span>
+                            <span id="last-pur-dat">Not available</span>
+                        </div>    
+                    <?php endif; ?>
+                    <?php if ($userRole == 1 || $userRole == 2): ?>
+                    <?php if ($porequiredcheck == 1 ): ?>
+                    <div class="po-order-no">
+                        <span class="po-number">PO Number :</span>
+                            <input type="text" name="po_number" class="po_number"
+                            <?php if (isset($_product['po_number']) && !empty($_product['po_number'])) { ?>
+                                value="<?= /* @escapeNotVerified */ $_product['po_number'] ?>"
+                           <?php } ?> >
+                    </div>
+                    <?php endif; ?>
+                    <div class="qty-plus-min">
+                        <span class="qty-txt">Qty :</span>
+	                    <input type="text" maxlength="12" min="1" value="<?= /* @escapeNotVerified */ $_product['qty'] ?>" title="Qty" class="input-text qty" data-validate="null">
+	                    <button class="qty-right">+</button>
+	                    <button class="qty-left">-</button>
+	                    <div class="show-error"></div>
+                    </div>
+                    <?php endif; ?>
+                    <div class="product-item-inner">
+                        <div class="product actions product-item-actions">
+                            <div class="actions-primary">
+                                  <input type="button" value="Update" class="qty-update" product-id = "<?= /* @escapeNotVerified */ $_product['productid'] ?>"  item-id = "<?= /* @escapeNotVerified */ $products['entity_id'] ?>" style="display:none;">
+                            </div>
+                        	<?php if ($userRole == 1 || $userRole == 2): ?>
+                            <div class="actions-primary">
+                                    <form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product['sku']) ?>" action="<?= /* @NoEscape */ $_product['addtocart'] ?>" method="post">
+                                        <input type="hidden" name="product" value="<?= /* @escapeNotVerified */ $_product['productid'] ?>">
+                                        <?= $block->getBlockHtml('formkey') ?>
+                                        <button type="submit" product_name="<?= /* @escapeNotVerified */ $_product['name'] ?>" id="moved-<?= /* @escapeNotVerified */ $_product['productid'] ?>" product_id ="<?= /* @escapeNotVerified */ $_product['productid'] ?>" item_id="<?= /* @escapeNotVerified */ $products['entity_id'] ?>"
+                                                title="<?= $block->escapeHtml(__('Move to Rush Order')) ?>"
+                                                class="action tocart primary moveto-rush">
+                                            <span><?= /* @escapeNotVerified */ __('Move to Rush Order') ?></span>
+                                        </button>
+                                    </form>
+                            </div>
+<!--                             <div class="actions-primary">
+                                    <form data-role="fav-form" data-product-sku="<?= $block->escapeHtml($_product['sku']) ?>" action="<?= /* @NoEscape */ $_product['addtocart'] ?>" method="post">
+                                        <input type="hidden" name="product" value="<?= /* @escapeNotVerified */ $_product['productid'] ?>">
+                                        <?= $block->getBlockHtml('formkey') ?>
+                                        <button type="submit"
+                                                title="<?= $block->escapeHtml(__('Add to Favorite')) ?>"
+                                                class="action tocart primary">
+                                            <span><?= /* @escapeNotVerified */ __('Add to Favorite') ?></span>
+                                        </button>
+                                    </form>
+                            </div> -->
+                            <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <?php endforeach; ?>
+        <?php endforeach; ?>
+    </ol>
+    <?php if (count($presentUserProduct) > 0 && $userRole !=3): ?>
+        <div class="move-all-rush">
+            <form  action="<?= /* @NoEscape */ $block->getUrl('storeorder/store/movealltorush') ?>" method="post">
+                    <input type="hidden" name="customer_id" value="<?= /* @escapeNotVerified */ $loggedCustomer ?>">
+                    <input type="hidden" name="customer_store" value="<?= /* @escapeNotVerified */ $activeStoreId ?>">
+                    <button type="submit" title="<?= $block->escapeHtml(__('Move to Rush Order')) ?>" class="action primary moveallto-rush">
+                        <span><?= /* @escapeNotVerified */ __('Move All to Rush Order') ?></span>
+                    </button>
+                    <div class="moveto-rush-info"><span class="note">Note : </span>It will move only for your added Product's</div>
+            </form>
+        </div>
+    <?php endif; ?>
+</div>
+<?php else: ?>
+
+<span class="store-product-empty">
+Products not added to this store
+</span>
+<?php endif; ?>
+
+

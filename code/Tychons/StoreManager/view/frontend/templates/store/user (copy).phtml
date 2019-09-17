@@ -1,0 +1,309 @@
+<div class="store-schedule">
+    <form action="" method="POST" name="sch_action">
+    <div class="table-wrapper storeuser">
+    <?php
+
+    $logedStore = $block->userStoreId();
+
+    $userRole = $block->getUserRole(); 
+
+    $user = $block->getUsers();
+
+    print_r($user);
+
+    die();
+
+    $record = $user->count();
+
+    ?>
+
+    <?php if($record >=1) { ?>
+    <table id="storeuser-table" class="data table table-storeuser">
+        <caption class="table-caption"><?= /* @escapeNotVerified */ __('Store User') ?></caption>
+        <thead>
+        <tr>
+            <th scope="col" class="col id"><?= /* @escapeNotVerified */ __('ID') ?></th>
+            <th scope="col" class="col name"><?= /* @escapeNotVerified */ __('Name') ?></th>
+            <th scope="col" class="col email"><?= /* @escapeNotVerified */ __('Email') ?></th>
+            <th scope="col" class="col role"><?= /* @escapeNotVerified */ __('Role') ?></th>
+<!--             <th scope="col" class="col id"><?= /* @escapeNotVerified */ __('Store') ?></th>
+            <th scope="col" class="col name"><?= /* @escapeNotVerified */ __('Address') ?></th> -->
+            <th scope="col" class="col location"><?= /* @escapeNotVerified */ __('Location') ?></th>
+            <th scope="col" class="col status"><?= /* @escapeNotVerified */ __('Status') ?></th>
+            <th scope="col" class="col action"><?= /* @escapeNotVerified */ __('Action') ?></th>
+        </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($block->getUsers() as $key => $user) :?>
+            <tr>
+                <td class="col id" user_id="<?php echo $user['entity_id']; ?>">
+                    <label for="user-id" class="label"><span><?php echo $user['entity_id']; ?></span></label>
+                </td>
+                <td class="col name" firstname="<?php echo $user['firstname']; ?>" lastname="<?php echo $user['lastname']; ?>">
+                    <label for="user-name" class="label"><span id="name"><?php echo $user['firstname'].' '.$user['lastname']; ?></span></label>
+                </td>
+                <td class="col email" email="<?php echo $user['email']; ?>">
+                    <label for="user-email" class="label"><span id="firstname"><?php echo $user['email']; ?></span></label>
+                </td>
+                <td class="col role" role="<?php echo $user['role_id']; ?>">
+                    <label for="user-role" class="label"><span><?php echo $user['role_id']; ?></span></label>
+                </td>
+                <td class="col location" default_location="<?php echo $user['default_location']; ?>">
+                    <label for="user-location" class="label"><span><?php echo $user['default_location']; ?></span></label>
+                </td>
+                <td class="col status" status="<?php echo $user['status']; ?>">
+                    <label for="user-status" class="label"><span>
+                        <?php echo $user['status'] ? 'Active' : 'Inactive'; ?>
+                        </span></label>
+                </td>
+                <td class="col user-action">
+                    <a for="user-edit" class="action user-edit"  data-action="action-edit" data-mobile-label="<?= /* @noEscape */ $block->escapeHtml(__('Edit')) ?>" data-trigger="update-user">
+                        <span>Edit</span>
+                    </a>
+                    <a for="user-delete" class="action user-delete" data-action="action-delete"><span>Delete</span></a>
+                </td>
+
+            </tr>
+             <?php endforeach; ?>
+        </tbody>
+    </table>
+    <?php }else{ ?>
+
+        <div class="not-found">No User found</div>
+
+    <?php } ?>
+    <div class="actions">
+        <button type="button"
+                title="<?= $block->escapeHtml(__('Add New User')) ?>"
+                class="action primary"
+                data-trigger="add-update-user"
+                data-mage-init='{"Magento_Company/js/user-edit":{"gridProvider":"company_users_listing.company_users_listing_data_source"}}'
+                data-mobile-label="<?= /* @noEscape */ $block->escapeHtml(__('Add New User')) ?>">
+            <span><?= $block->escapeHtml(__('Add New User')) ?></span>
+        </button>
+    </div>
+</form>
+ </div>
+</div>
+
+<div data-bind="mageInit: {
+        'Magento_Ui/js/modal/modal':{
+            'type': 'popup',
+            'title': 'Add New user',
+            'trigger': '[data-trigger=add-update-user]',
+            'responsive': true,
+        }}">
+<div class="content" >
+<?php /** @var $block Tychons\StoreManager\Block\User\Store */ ?>
+<form class="form form-add-storeuser" method="post" id="add-storeuser-form"
+      action="<?= $block->escapeUrl($block->getUrl('company/store/add')) ?>"
+      data-mage-init='{"validation":{}}'>
+    <input type="hidden" name="target_id" />
+    <input type="hidden" name="customer_id" />
+    <fieldset class="fieldset info">
+        <div class="field firstname required">
+            <label class="label" for="firstname">
+                <span><?= $block->escapeHtml(__('First Name')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text" name="firstname" id="firstname" value=""
+                       title="<?= $block->escapeHtml(__('First Name')) ?>"
+                       class="input-text firstname" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field lastname required">
+            <label class="label" for="lastname">
+                <span><?= $block->escapeHtml(__('Last Name')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text" name="lastname" id="lastname" value=""
+                       title="<?= $block->escapeHtml(__('Last Name')) ?>"
+                       class="input-text" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email">
+                <span><?= $block->escapeHtml(__('Email')) ?></span>
+            </label>
+            <div class="control">
+                <input type="email" name="email" id="email" value=""
+                       title="<?= $block->escapeHtml(__('Email')) ?>"
+                       data-role="email"
+                       class="input-text" data-validate="{required:true, 'validate-email':true}">
+            </div>
+        </div>
+        <div class="field password required">
+            <label class="label" for="telephone">
+                <span><?= $block->escapeHtml(__('Password')) ?></span>
+            </label>
+            <div class="control">
+                <input type="password" name="password" id="password" value=""
+                       title="<?= $block->escapeHtml(__('Password')) ?>"
+                       class="input-text" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field confirmpassword required">
+            <label class="label" for="confirmpassword">
+                <span><?= $block->escapeHtml(__('Confirm Password')) ?></span>
+            </label>
+            <div class="control">
+                <input type="password" name="confirmpassword" id="confirmpassword" value=""
+                       title="<?= $block->escapeHtml(__('Confirm Password')) ?>"
+                       class="input-text" data-validate="{required:true, equalTo:'#password'}">
+            </div>
+        </div>
+        <div class="field default_location required">
+            <label class="label" for="default_location">
+                <span><?= $block->escapeHtml(__('Default Location')) ?></span>
+            </label>
+            <div class="control">
+                <select data-role="location-select" name="default_location" id="default_location">
+                        <option value="Com001">Com001</option>
+                        <option value="com001">com001</option>
+                        <option value="com003">com003</option>
+                </select>
+            </div>
+        </div>
+        <div class="field role required">
+            <label class="label" for="jobtitle">
+                <span><?= $block->escapeHtml(__('User Role')) ?></span>
+            </label>
+            <div class="control">
+                <select data-role="role-select" name="role" id="role">
+                        <option value="admin">Admin</option>
+                        <option value="manager">Manager</option>
+                        <option value="employee">Employee</option>
+                </select>
+            </div>
+        </div>
+        <div class="field status">
+            <label class="label" for="status">
+                <span><?= $block->escapeHtml(__('Status')) ?></span>
+            </label>
+            <div class="control">
+                <select data-role="status-select" name="status" id="status">
+                    <option value="1"><?= $block->escapeHtml(__('Active')) ?></option>
+                    <option value="0"><?= $block->escapeHtml(__('Inactive')) ?></option>
+                </select>
+            </div>
+        </div>
+        <div class="success-msg"></div>
+    </fieldset>
+   <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary user-submit" title="<?php  echo __('Submit') ?>"><span><?php echo __('Submit') ?></span></button>
+            <button class="action cancel secondary" type="button" data-role="action"><span>Cancel</span></button>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+
+
+<div data-bind="mageInit: {
+        'Magento_Ui/js/modal/modal':{
+            'type': 'popup',
+            'title': 'Update user',
+            'trigger': '[data-trigger=update-user]',
+            'responsive': true,
+        }}">
+<div class="content" >
+<?php /** @var $block Tychons\StoreManager\Block\User\Store */ ?>
+<form class="form form-update-storeuser" method="post" id="update-storeuser-form"
+      action="<?= $block->escapeUrl($block->getUrl('company/store/update')) ?>"
+      data-mage-init='{"validation":{}}'>
+    <input type="hidden" name="target_id" />
+    <input type="hidden" name="id"  id="user_id"/>
+    <input type="hidden" name="customer_id" />
+    <fieldset class="fieldset info">
+        <div class="field firstname required">
+            <label class="label" for="firstname">
+                <span><?= $block->escapeHtml(__('First Name')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text" name="up_firstname" id="up_firstname" value=""
+                       title="<?= $block->escapeHtml(__('First Name')) ?>"
+                       class="input-text up_firstname" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field up_lastname required">
+            <label class="label" for="up_lastname">
+                <span><?= $block->escapeHtml(__('Last Name')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text" name="up_lastname" id="up_lastname" value=""
+                       title="<?= $block->escapeHtml(__('Last Name')) ?>"
+                       class="input-text" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field up_email required">
+            <label class="label" for="up_email">
+                <span><?= $block->escapeHtml(__('Email')) ?></span>
+            </label>
+            <div class="control">
+                <input type="email" name="up_email" id="up_email" value=""
+                       title="<?= $block->escapeHtml(__('Email')) ?>"
+                       data-role="email"
+                       class="input-text" data-validate="{required:true, 'validate-email':true}">
+            </div>
+        </div>
+        <div class="field up_default_location required">
+            <label class="label" for="up_default_location">
+                <span><?= $block->escapeHtml(__('Default Location')) ?></span>
+            </label>
+            <div class="control">
+                <select data-role="location-select" name="up_default_location" id="up_default_location">
+                        <option value="Com001">Com001</option>
+                        <option value="com001">com001</option>
+                        <option value="com003">com003</option>
+                </select>
+            </div>
+        </div>
+        <div class="field up_role required">
+            <label class="label" for="up_jobtitle">
+                <span><?= $block->escapeHtml(__('User Role')) ?></span>
+            </label>
+            <div class="control">
+                <select data-role="role-select" name="up_role" id="up_role">
+                        <option value="admin">Admin</option>
+                        <option value="manager">Manager</option>
+                        <option value="employee">Employee</option>
+                </select>
+            </div>
+        </div>
+        <div class="field up_status">
+            <label class="label" for="up_status">
+                <span><?= $block->escapeHtml(__('Status')) ?></span>
+            </label>
+            <div class="control">
+                <select data-role="status-select" name="up_status" id="up_status">
+                    <option value="1"><?= $block->escapeHtml(__('Active')) ?></option>
+                    <option value="0"><?= $block->escapeHtml(__('Inactive')) ?></option>
+                </select>
+            </div>
+        </div>
+        <div class="update-msg"></div>
+    </fieldset>
+   <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary up-user-submit" title="<?php  echo __('Submit') ?>"><span><?php echo __('Submit') ?></span></button>
+            <button class="action cancel secondary" type="button" data-role="action"><span>Cancel</span></button>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#add-storeuser-form": {
+            "validation": {}
+        }
+    }
+</script>
+
+<style type="text/css">
+	div#modal-content-1 {
+    height: 350px;
+}
+</style>

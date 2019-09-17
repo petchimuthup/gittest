@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        
+        <update id="Tychons_Extensions::tychonsextensions" title="Tychons Extensions" module="Tychons_Quickrfq" sortOrder="300" resource="Tychons_Extensions::tychonsextensions"/>
+        <add id="Tychons_Quickrfq::quickrfq_main" title="Tychons Quick RFQ" module="Tychons_Quickrfq" sortOrder="10" parent="Tychons_Extensions::tychonsextensions" resource="Tychons_Quickrfq::quickrfq_main"/>
+
+        <add id="Tychons_Quickrfq::quickrfq" title="Quick RFQ" module="Tychons_Quickrfq" sortOrder="50" parent="Tychons_Quickrfq::quickrfq_main" action="quickrfq/index" resource="Tychons_Quickrfq::quickrfq"/>
+        
+    </menu>
+</config>

@@ -1,0 +1,18 @@
+<?php 
+
+$product = $block->getProduct();
+
+$postParams = $block->getAddToCartPostParams($product);
+
+?>
+   <div class="addtostoreorder-btn">
+     <button type="submit" id="addto-store" title="Add To Store Order" class="action primary addto-store-<?= /* @escapeNotVerified */ $postParams['data']['product']; ?>" product_id= "<?= /* @escapeNotVerified */ $postParams['data']['product']; ?>" product_name ="<?= /* @escapeNotVerified */ $postParams['data']['product_name'] ?>" storeorder_url ="<?= /* @escapeNotVerified */ $block->getUrl("storeorder/index/index"); ?>" >
+        <span>Add To Store Order</span>
+    </button>
+        
+    </div>
+
+
+
+
+

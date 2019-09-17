@@ -1,0 +1,496 @@
+    1  ls
+    2  mv app/etc/env.php.local app/etc/env.php
+    3  mv app/etc/config.php.local app/etc/config.php
+    4  chmod â€“R 0777 var pub generated
+    5  chmod â -R 0777 var pub generated
+    6  chmod -R 0777 var pub generated
+    7  ls
+    8  cd app
+    9  ls
+   10  bin/magento setup:upgrade
+   11  ls
+   12  cd ..
+   13  bin/magento setup:upgrade
+   14  ls
+   15  cd ..
+   16  ls
+   17  cd ..
+   18  ls
+   19  bin/magento setup:upgrade
+   20  cd bin
+   21  ls
+   22  exit
+   23  ls
+   24  cd app
+   25  ls
+   26  cd ..
+   27  cd vendo
+   28  cd vendor
+   29  ls
+   30  ./magento setup:upgrade
+   31  cd bin
+   32  ls
+   33  ./magento setup:upgrade
+   34  cd ..
+   35  cd ..
+   36  cd ..
+   37  cd ..
+   38  ls
+   39  sudo find / -name '*magento*'
+   40  find / -name '*magento*'
+   41  magento
+   42  find / -name 'magento'
+   43  /var/www/bin/magento setup:upgrade
+   44  history > history.txt
+   45  nano history.txt
+   46  ls
+   47  exit
+   48  bin/magento cache:flush
+   49  chmod -R 0777 var pub generated
+   50  /var/www/bin/magento cache:flush
+   51  chmod -R 0777 var pub generated
+   52  exit
+   53  ls
+   54  cd vendor
+   55  ls
+   56  cd swissup
+   57  cd mod*
+   58  cd module-askit
+   59  cd view
+   60  cd adminhtml
+   61  cd layout
+   62  ls
+   63  pwd
+   64  exit
+   65  /var/www/bin/magento setup:upgrade
+   66  chmod -R 0777 var pub generated
+   67  exit
+   68  /var/www/bin/magento module:status
+   69  /var/www/bin/magento setup:upgrade
+   70  chmod -R 0777 var pub generated
+   71  /var/www/bin/magento module:status
+   72  /var/www/bin/magento module:status
+   73  /var/www/bin/magento module:enable ISN_HelloWorld
+   74  /var/www/bin/magento setup:upgrade
+   75  /var/www/bin/magento setup:static-content:deploy
+   76  chmod -R 0777 var pub generated
+   77  /var/www/bin/magento module:enable ISN_HelloWorld
+   78  /var/www/bin/magento setup:static-content:deploy
+   79  /var/www/bin/magento setup:upgrade
+   80  chmod -R 0777 var pub generated
+   81  /var/www/bin/magento cache:flush
+   82  chmod -R 0777 var pub generated
+   83  exit
+   84  /var/www/bin/magento module:enable [--force] Magento_Developer
+   85  /var/www/bin/magento module:enable Magento_Developer
+   86  /var/www/bin/magento magento dev:tests:run --help
+   87  /var/www/bin/magento dev:tests:run --help
+   88  /var/www/bin/magento dev:tests:run integration
+   89  cd /var/www/magento
+   90  ls
+   91  cd app
+   92  ls
+   93  cd code
+   94  cd ..
+   95  exit
+   96  cd var/www/mangento2/dev/t
+   97  cd var/www/mangento2/dev
+   98  ls
+   99  cd var
+  100  ls
+  101  cd ..
+  102  ls
+  103  cd app
+  104  ls
+  105  cd ..
+  106  cd vendor
+  107  cd mangento2
+  108  ls
+  109  cd magneto
+  110  cd ..
+  111  cd ..
+  112  ls
+  113  cd www
+  114  ls
+  115  cd dev
+  116  ls
+  117  cd test
+  118  cd test*
+  119  ls
+  120  cd unit
+  121  ls
+  122  cd framework
+  123  ls
+  124  cd ..
+  125  pwd
+  126  /var/www/bin/phpunit /var/www/dev/tests/unit
+  127  ls
+  128  /var/www/bin/phpunit
+  129  cd /var/
+  130  ls
+  131  cd www
+  132  ls
+  133  cd dev
+  134  ls
+  135  cd ..
+  136  ls
+  137  cd bin
+  138  ls
+  139  cd ..
+  140  ls
+  141  cd vendor
+  142  ls
+  143  ./phpunit /var/www/dev/tests/unit
+  144  cd phpunit
+  145  ls
+  146  ./phpunit /var/www/dev/tests/unit
+  147  cd phpunit
+  148  ls
+  149  ./phpunit /var/www/dev/tests/unit
+  150  php phpunit /var/www/dev/tests/unit
+  151  ls
+  152  which php
+  153  /usr/local/bin/phpunit
+  154  cd /usr/local/bin/
+  155  ls
+  156  apt-get phpunit
+  157  apt-get install phpunit
+  158  cd /usr/local/bin/phpunit
+  159  cd /usr/bin
+  160  ls
+  161  phpunit
+  162  ./phpunit
+  163  cd phpunit
+  164  cd ..
+  165  cd ..
+  166  cd ..
+  167  cd var/www
+  168  ls
+  169  nano composer.json
+  170  apt-get nano
+  171  apt-get install nano
+  172  vim composer.json
+  173  cd ..
+  174  cd ..
+  175  find / -iname phpunit
+  176  /var/www/vendor/bin/phpunit 
+  177  find / -iname php
+  178  /usr/local/php
+  179  /usr/local/php/php
+  180  /usr/local/bin/php
+  181  /usr/local/bin/php --help
+  182  /usr/local/bin/php -v
+  183  exit
+  184  /usr/local/bin/php -v
+  185  php -v
+  186  ls
+  187  cd app
+  188  ls
+  189  cd etc
+  190  ls
+  191  nano
+  192  sudo apt install nano
+  193  apt install nano
+  194  vi conig.php
+  195  vi config.php
+  196  ls
+  197  /var/www/bin/magento module:enable Magento_Developer
+  198  man history
+  199  cat history
+  200  history -> history.txt
+  201  history > history.txt
+  202  nano history.txt
+  203  aptget
+  204  apt
+  205  apt install nano
+  206  apt-get update
+  207  apt-get install nano
+  208  nano history.txt
+  209  /var/www/bin/magento setup:upgrade
+  210  nano history.txt
+  211  chmod -R 0777 var pub generated
+  212  /var/www/bin/magento setup:upgrade
+  213  composer require magento/extension-b2b=^1.1
+  214  chmod -R 0777 var pub generated
+  215  /var/www/bin/magento setup:upgrade
+  216  /var/www/bin/magento setup:upgrade
+  217  /var/www/bin/magento setup:upgrade
+  218  /var/www/bin/magento setup:di:compile
+  219  cd /var/www/app/code/magento
+  220  cd /var/www/app/code/Magento
+  221  ls
+  222  cd ..
+  223  cd ..
+  224  cd ..
+  225  ls
+  226  cd ..
+  227  ls
+  228  cd ..
+  229  ls
+  230  /var/www/bin/magento cache:clean
+  231  /var/www/bin/magento setup:di:compile
+  232  /var/www/bin/magento setup:compile
+  233  /var/www/bin/magento setup:di:compile --help
+  234  /var/www/bin/magento setup:di:compile -vvv
+  235  /var/www/bin/magento setup:di:compile -vvv
+  236  nano history.txt
+  237  /var/www/bin/magento setup:di:compile -h
+  238  /var/www/bin/magento setup:di:compile
+  239  /var/www/bin/magento setup:di:compile -vvv
+  240  /var/www/bin/magento setup:di:compile -vvv
+  241  /var/www/bin/magento setup:di:compile -vvv
+  242  /var/www/bin/magento setup:di:compile -vvv
+  243  /var/www/bin/magento setup:di:compile -vvv
+  244  /var/www/bin/magento setup:di:compile -vvv
+  245  /var/www/bin/magento setup:di:compile -vvv
+  246  /var/www/bin/magento setup:di:compile -vvv
+  247  /var/www/bin/magento setup:upgrade
+  248  /var/www/bin/magento setup:upgrade -h
+  249  /var/www/bin/magento setup:upgrade -vvv
+  250  /var/www/bin/magento setup:di:compile -vvv
+  251  bin/magento setup:upgrade
+  252  /var/www/bin/magento setup:upgrade -vvv
+  253  /var/www/bin/magento setup:upgrade -vvv
+  254  composer require magento/extension-b2b=^1.1
+  255  composer update
+  256  composer require magento/extension-b2b
+  257  composer require magento/extension-b2b
+  258  composer require magento/extension-b2b=^1.1
+  259  composer require magento/extension-b2b=^1.1
+  260  composer require magento/extension-b2b=^1.1
+  261  composer update
+  262  composer require magento/extension-b2b=^1.1
+  263  composer require
+  264  composer require magento/extension-b2b=^1.1
+  265  composer update
+  266  /var/www/bin/magento cache:clean
+  267  composer update
+  268  composer require magento/extension-b2b=^1.1
+  269  exit
+  270  service docker stop
+  271  sudo service docker stop
+  272  exit
+  273  fj
+  274  fg
+  275  exit
+  276  composer require magento/extension-b2b=^1.1
+  277  composer require magento/extension-b2b=^1.1
+  278  exit
+  279  composer require magento/extension-b2b=^1.1
+  280  composer require magento/extension-b2b=^1.1
+  281  composer require magento/extension-b2b=^1.1
+  282  composer require magento/extension-b2b=^1.1
+  283  composer require magento/extension-b2b=^1.1
+  284  composer require magento/extension-b2b=^1.1
+  285  host -t a repo.magento.com
+  286  apt-get install host
+  287  docker run -it ubuntu more /etc/resolv.conf
+  288  more /etc/resolv.conf
+  289  nslookup google.com
+  290  RUN apt-get update
+  291  apt-get update
+  292  nano /etc/resolv.conf
+  293  apt-get update
+  294  sudo /etc/init.d/networking restart
+  295  /etc/init.d/networking restart
+  296  nano /etc/resolv.conf
+  297  systemctl restart networking
+  298  /etc/rc.d/rc.inet1 restart
+  299  /etc/rc.d/rc.inet1 eth1_restart
+  300  /etc/rc.d/rc.inet1
+  301  /etc/rc.d/rc.inetl
+  302  ifconfig -a
+  303  apt-get ifconfig -a
+  304  apt-get install ifconfig
+  305  ip
+  306  exit
+  307  ls
+  308  nano /etc/resolv.conf
+  309  apt-get install ifconfig
+  310  apt-get install ip
+  311  apt-get update
+  312  exit
+  313  apt-get update
+  314  composer require magento/extension-b2b=^1.1
+  315  nslookup google.com
+  316  /var/www/bin/magento cache:clean
+  317  fg
+  318  nano history.txt
+  319  nano history.txt
+  320  /var/www/bin/magento setup:upgrade
+  321  /var/www/bin/magento setup:upgrade
+  322  /var/www/bin/magento setup:upgrade
+  323  apt-get update
+  324  /var/www/bin/magento setup:di:compile -vvv
+  325  /var/www/bin/magento setup:di:compile -vvv
+  326  /var/www/bin/magento setup:di:compile -vvv
+  327  apt-get update
+  328  /var/www/bin/magento setup:upgrade
+  329  fg
+  330  fg
+  331  /var/www/bin/magento module:enable Magento_Developer
+  332  fg
+  333  chmod -R 0777 var pub generated
+  334  composer require magento/extension-b2b=^1.1
+  335  /var/www/bin/magento module:disable magento/extension-b2b=^1.1 --clear-static-content
+  336  /var/www/bin/magento module:disable magento/extension-b2b
+  337  bin/magento setup:static-content:deploy -f
+  338  /var/www/bin/magento setup:upgrade
+  339  composer update
+  340  composer require magento/extension-b2b=^1.1
+  341  composer require magento/extension-b2b=^1.1
+  342  composer update
+  343  /var/www/bin/magento setup:upgrade
+  344  composer require magento/extension-b2b
+  345  composer require magento/extension-b2b=^1.1
+  346  composer require magento/extension-b2b
+  347  composer update
+  348  /var/www/bin/magento setup:upgrade
+  349  composer update
+  350  composer require magento/extension-b2b=^1.0
+  351  bin/magento setup:upgrade
+  352  bin/magento setup:upgrade
+  353  bin/magento setup:di:compile
+  354  bin/magento setup:static-content:deploy -f
+  355  bin/magento cache:clean
+  356  chmod -R 0777 var pub generated
+  357  bin/magento setup:upgrade
+  358  bin/magento cache:clean
+  359  chmod -R 0777 var pub generated
+  360  bin/magento setup:upgrade
+  361  chmod -R 0777 var pub generated
+  362  bin/magento cache:clean
+  363  chmod -R 0777 var pub generated
+  364  bin/magento setup:upgrade
+  365  bin/magento setup:di:compile
+  366  bin/magento setup:static-content:deploy -f
+  367  chmod -R 0777 var pub generated
+  368  bin/magento cache:clean
+  369  bin/magento module:enable Tychons_Favoriteorder
+  370  bin/magento cache:clean
+  371  chmod -R 0777 var pub generated
+  372  bin/magento setup:upgrade
+  373  bin/magento cache:clean
+  374  chmod -R 0777 var pub generated
+  375  bin/magento setup:upgrade
+  376  bin/magento cache:clean
+  377  chmod -R 0777 var pub generated
+  378  bin/magento cache:clean
+  379  chmod -R 0777 var pub generated
+  380  bin/magento setup:upgrade
+  381  composer update
+  382  bin/magento setup:upgrade
+  383  chmod -R 0777 var pub generated
+  384  bin/magento setup:upgrade
+  385  chmod -R 0777 var pub generated
+  386  bin/magento cache:clean
+  387  chmod -R 0777 var pub generated
+  388  bin/magento setup:upgrade
+  389  bin/magento cache:clean
+  390  chmod -R 0777 var pub generated
+  391  bin/magento cache:clean
+  392  chmod -R 0777 var pub generated
+  393  bin/magento module:enable --clear-static-content Tychons_Favoriteorder
+  394  bin/magento module:enable --clear-static-content Tychons_Favoriteorder
+  395  bin/magento module:disable --clear-static-content Tychons_Favoriteorder
+  396  bin/magento setup:di:compile
+  397  bin/magento cache:clean
+  398  chmod -R 0777 var pub generated
+  399  bin/magento module:disable --clear-static-content Tychons_Rushorder
+  400  bin/magento module:disable --clear-static-content Tychons_StoreManager
+  401  bin/magento setup:di;compile
+  402  bin/magento setup:di:compile
+  403  php bin/magento setup:static-content:deploy
+  404  chmod -R 0777 var pub generated
+  405  bin/magento module:disable --clear-static-content Tychons_Storeorder
+  406  bin/magento setup:di:compile
+  407  php bin/magento setup:static-content:deploy
+  408  chmod -R 0777 var pub generated
+  409  bin/magento module:enable --clear-static-content Tychons_Storeorder
+  410  bin/magento setup:di:compile
+  411  bin/magento setup:di:compile -vvv
+  412  bin/magento setup:di:compile -vvv
+  413  nano history.txt
+  414  fg
+  415  fg
+  416  bin/magento setup:upgrade
+  417  bin/magento setup:di:compile -vvv
+  418  chmod -R 0777 var pub generated
+  419  bin/magento setup:di:compile -vvv
+  420  chmod -R 0777 var pub generated
+  421  bin/magento setup:di:compile -vvv
+  422  bin/magento module:enable --clear-static-content Tychons_Storeorder
+  423  bin/magento cache:clean
+  424  php bin/magento setup:static-content:deploy
+  425  chmod -R 0777 var pub generated
+  426  bin/magento setup:di:compile -vvv
+  427  bin/magento module:status
+  428  bin/magento setup:upgrade
+  429  fg
+  430  bin/magento cache:clean
+  431  chmod -R 0777 var pub generated
+  432  bin/magento setup:upgrade
+  433  chmod -R 0777 var pub generated
+  434  bin/magento module:status
+  435  bin/magento setup:di:compile -vvv
+  436  chmod -R 0777 var pub generated
+  437  bin/magento setup:di:compile -vvv
+  438  bin/magento setup:upgrade
+  439  chmod -R 0777 var pub generated
+  440  bin/magento setup:di:compile -vvv
+  441  bin/magento setup:upgrade
+  442  chmod -R 0777 var pub generated
+  443  bin/magento setup:di:compile -vvv
+  444  bin/magento setup:static-content:deploy -f
+  445  chmod -R 0777 var pub generated
+  446  bin/magento cache:clean
+  447  chmod -R 0777 var pub generated
+  448  history > history.txt
+  449  nano history.txt
+  450  ls
+  451  cd var
+  452  ls
+  453  cd log
+  454  ls
+  455  nano system.log
+  456  rm -rf var/di/* var/generation/* var/cache/* var/page_cache/* var/view_preprocessed/* var/composer_home/cache/*
+  457  php bin/magento setup:di:compile
+  458  bin/magento setup:di:compile
+  459  bin/magento setup:di:compile -vvv
+  460  ls
+  461  cd ..
+  462  cd ..
+  463  bin/magento setup:di:compile -vvv
+  464  php bin /magento cache:clean 
+  465  chmod -R 0777 var pub generated
+  466  exit
+  467  bin/magento setup:upgrade
+  468  php bin /magento cache:clean 
+  469  chmod -R 0777 var pub generated
+  470  bin/magento setup:static-content deploy -f
+  471  bin/magento setup:static-content:deploy -f
+  472  bin/magento setup:di:compile -vvv
+  473  php bin /magento cache:clean 
+  474  chmod -R 0777 var pub generated
+  475  ls
+  476  ls
+  477  cd app/code/
+  478  ls
+  479  ls
+  480  pwd
+  481  bin/magento module:status Tychons_Favoriteorder
+  482  cd ../..
+  483  pwd
+  484  bin/magento module:status Tychons_Favoriteorder
+  485  bin/magento module:status Tychons_Favoriteorder
+  486  bin/magento module:status Tychons_Favoriteorder
+  487  cd app/etc/
+  488  cd 
+  489  cd /var/www/app/code/
+  490  ls
+  491  cd ..
+  492  cd etc/
+  493  ls
+  494  sudo nano config.php
+  495  nano config.php
+  496  history > history.txt

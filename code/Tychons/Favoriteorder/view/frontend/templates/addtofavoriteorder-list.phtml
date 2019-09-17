@@ -1,0 +1,49 @@
+<?php
+
+$product = $block->getProduct();
+
+$postParams = $block->getAddToCartPostParams($product);
+
+$favadded = $block->getAddedProduct();
+
+if (count($favadded) > 0) {
+
+    $addedProduct = json_decode($favadded[0]['product_id_qty'], true);
+
+    $getProduct = array_column($addedProduct, 'productid');
+
+} else {
+
+    $getProduct = array();
+}
+
+$productyId = $postParams['data']['product'];
+
+$added = "listed";
+
+?>
+
+
+<div class="addtofavoriteorder-btn">
+    <button type="submit" id="addto-favorite" title="Add To Favorite"
+            class="action primary addto-favorite-<?= /* @escapeNotVerified */
+            $postParams['data']['product']; ?> <?php if (in_array($productyId, $getProduct)): ?> <?= $added ?>  <?php endif; ?>"
+            product_id="<?= /* @escapeNotVerified */
+            $postParams['data']['product']; ?>" product_name="<?= /* @escapeNotVerified */
+    $postParams['data']['product_name'] ?>" favoriteorder_url="<?= /* @escapeNotVerified */
+    $block->getUrl("favoriteorder/index/index"); ?>">
+        <?php if (in_array($productyId, $getProduct)): ?>
+
+            <span>Favorite</span>
+
+        <?php else: ?>
+
+            <span>Add To Favorite</span>
+
+        <?php endif; ?>
+    </button>
+</div>
+
+
+
+

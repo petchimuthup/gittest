@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Tychons::top_level" module="Tychons_Products" resource="Magento_Backend::content" sortOrder="9999"
+             title="Tire managements"/>
+        <add action="storeproduct/index/index" id="Tychons_Products::index_index" module="Tychons_Products"
+             parent="Tychons::top_level" resource="Tychons_Products::index_index" sortOrder="9999" title="Products"/>
+    </menu>
+</config>

@@ -1,0 +1,10 @@
+<ul class="opc-progress-bar">
+		<li class="opc-progress-bar-item _complete shopping-cart" >
+            <span class="ui-icon shopping-cart-icon" data-bind="click: function () {window.location = window.checkoutConfig.checkoutUrl + 'cart/';}"><!-- ko i18n: '' --><!-- /ko --></span>
+        </li>
+    <!-- ko foreach: { data: steps().sort(sortItems), as: 'item' } -->
+        <li class="opc-progress-bar-item" data-bind="css: item.isVisible() ? '_active' : ($parent.isProcessed(item) ? '_complete' : '')">
+            <span data-bind="i18n: item.title, click: $parent.navigateTo"></span>
+        </li>
+    <!-- /ko -->
+</ul>

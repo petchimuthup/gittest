@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="customer_account_navigation">
+            <block class="Magento\Customer\Block\Account\SortLinkInterface" name="ustomer-account-navigation-orderhistory-link">
+                <arguments>
+                    <argument name="path" xsi:type="string">orderhistory</argument>
+                    <argument translate="true" name="label" xsi:type="string">Order History</argument>
+                    <argument name="sortOrder" xsi:type="number">250</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Customer\Block\Account\SortLinkInterface" name="ustomer-account-navigation-purchaseorder-link">
+                <arguments>
+                    <argument name="path" xsi:type="string">purchaseorderdetails</argument>
+                    <argument translate="true" name="label" xsi:type="string">Purchase Order Details</argument>
+                    <argument name="sortOrder" xsi:type="number">247</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Customer\Block\Account\SortLinkInterface" name="ustomer-account-navigation-ordersummary-link">
+                <arguments>
+                    <argument name="path" xsi:type="string">purchasesummary/show/summary</argument>
+                    <argument translate="true" name="label" xsi:type="string">Purchase Order Summary</argument>
+                    <argument name="sortOrder" xsi:type="number">245</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Customer\Block\Account\SortLinkInterface" name="ustomer-account-navigation-schedule-link">
+                <arguments>
+                    <argument name="path" xsi:type="string">storeorder/schedule</argument>
+                    <argument translate="true" name="label" xsi:type="string">Order Schedule</argument>
+                    <argument name="sortOrder" xsi:type="number">240</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Customer\Block\Account\SortLinkInterface" name="customer-account-navigation-companyuser-link">
+                <arguments>
+                    <argument name="path" xsi:type="string">company/store/user</argument>
+                    <argument translate="true" name="label" xsi:type="string">Manage User</argument>
+                    <argument name="sortOrder" xsi:type="number">239</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Customer\Block\Account\SortLinkInterface" name="customer-account-navigation-companyuser-link">
+                <arguments>
+                    <argument name="path" xsi:type="string">company/store/user</argument>
+                    <argument translate="true" name="label" xsi:type="string">Manage User</argument>
+                    <argument name="sortOrder" xsi:type="number">238</argument>
+                </arguments>
+            </block>
+            <referenceBlock name="customer-account-navigation-company-roles-link" remove="true"/>
+            <referenceBlock name="customer-account-navigation-orders-link" remove="true"/>
+            <referenceBlock name="customer-account-navigation-company-link" remove="true"/>
+            <referenceBlock name="customer-account-navigation-company-users-link" remove="true"/>
+            <referenceBlock name="customer-account-navigation-company-profile-link" remove="true"/>
+            <referenceBlock name="company-customer-account-navigation-orders-link" remove="true"/>
+        </referenceBlock>
+        <referenceBlock name="top.links">
+            <referenceBlock name="invitation_link_top" remove="true" />
+        </referenceBlock>
+    </body>
+</page>
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<button href="#"
+        class="action primary movetostore move-<?= $block->getProductId(); ?>"
+        title="<?= $block->escapeHtmlAttr(__('Move to Store Order')) ?>"
+        aria-label="<?= $block->escapeHtmlAttr(__('Move to Store Ordert')) ?>"
+        data-action="move-to-storeorder"
+        item_id="cart-<?= $block->getItemId(); ?>-qty"
+        product_id="<?= $block->getProductId(); ?>"
+        id="move-<?= $block->getProductId(); ?>"
+        role="button">
+    <span><?= $block->escapeHtml(__('Move to Store Order')) ?></span>
+</button>

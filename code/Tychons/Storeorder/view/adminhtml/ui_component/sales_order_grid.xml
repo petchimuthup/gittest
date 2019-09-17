@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="sales_order_columns">
+        <column name="company_id" class="Tychons\Storeorder\Ui\Component\Listing\Column\Company">
+            <settings>
+            <label translate="true">Company Id</label>
+               <filter>text</filter>
+               <sortable>true</sortable>
+            </settings>
+        </column>
+        <column name="company_name" sortOrder="0" class="Tychons\Storeorder\Ui\Component\Listing\Column\CompanyName">
+            <settings>
+            <label translate="true">Company Name</label>
+               <filter>text</filter>
+               <sortable>true</sortable>
+            </settings>
+        </column>
+    </columns>
+</listing>

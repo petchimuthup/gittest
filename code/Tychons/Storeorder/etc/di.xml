@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Customer\Controller\Account\LoginPost" type="Tychons\Storeorder\Controller\Account\LoginPost" />
+	<preference for="Tychons\Storeorder\Api\SchedulerRepositoryInterface" type="Tychons\Storeorder\Model\SchedulerRepository"/>
+	<preference for="Tychons\Storeorder\Api\Data\SchedulerInterface" type="Tychons\Storeorder\Model\Data\Scheduler"/>
+	<preference for="Tychons\Storeorder\Api\Data\SchedulerSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<type name="Tychons\Storeorder\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Tychons\Storeorder\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">StoreOrderLogHandler</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Tychons\Storeorder\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Tychons\Storeorder\Model\ResourceModel\StoreOrder\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">storeorder_details</argument>
+            <argument name="resourceModel" xsi:type="string">Tychons\Storeorder\Model\ResourceModel\StoreOrder\Collection</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="tychons_Storeorder_storeorder_listing_data_source" xsi:type="string">Tychons\Storeorder\Model\ResourceModel\StoreOrder\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

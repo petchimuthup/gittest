@@ -1,0 +1,13 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="customer_form">
+            <block class="Tychons\StoreManager\Block\Adminhtml\Edit\Tab\AssignStore" name="customertab_panel">
+                <arguments>
+                    <argument name="tab_label" xsi:type="string" translate="true">Assign Store</argument>
+                    <argument name="sort_order" xsi:type="number">20</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

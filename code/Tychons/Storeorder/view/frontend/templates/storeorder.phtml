@@ -1,0 +1,25 @@
+<?php
+
+/** @var $block Tychons\Storeorder\Block\Product\View */
+
+
+$customer_id = $block->getCustomerId();
+
+$productcollection = $block->getCollection();
+
+$baseUrl = $block->getBaseUrl();
+
+
+
+
+
+
+
+?>
+<div class="custom link storeorder" data-bind="scope: 'storeorder'">
+    <a href="<?= $block->getUrl('storeorder/index/index'); ?>" class="storeorder-custom">
+        <span class="text add-to-store-order">Store Order</span>
+        
+              
+    </a>
+</div>

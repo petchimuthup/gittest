@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<fieldset name="customerinformation" sortOrder="20">
+    <settings>
+        <collapsible>true</collapsible>
+        <label translate="true">Customer Information</label>
+        <dataScope>customerinformation</dataScope>
+    </settings>
+    <field name="customer_number" formElement="input">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="source" xsi:type="string">customer_number</item>
+            </item>
+        </argument>
+        <settings>
+            <validation>
+                <rule name="required-entry" xsi:type="boolean">false</rule>
+            </validation>
+            <dataType>text</dataType>
+            <label translate="true">Customer Number</label>
+        </settings>
+    </field>
+    <field name="parent_customer_number" formElement="input">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="source" xsi:type="string">parent_customer_number</item>
+            </item>
+        </argument>
+        <settings>
+            <validation>
+                <rule name="required-entry" xsi:type="boolean">false</rule>
+            </validation>
+            <dataType>text</dataType>
+            <label translate="true">Parent Customer Number</label>
+        </settings>
+    </field>
+    <field name="po_number_required" formElement="checkbox">
+        <argument name="data" xsi:type="array">
+ 			<item name="config" xsi:type="array">
+           <!--  <item name="sortOrder" xsi:type="number">10</item> -->
+            <item name="dataType" xsi:type="string">boolean</item>
+            <item name="formElement" xsi:type="string">checkbox</item>
+            <item name="source" xsi:type="string">po_number_required</item>
+            <item name="prefer" xsi:type="string">toggle</item>
+            <item name="label" xsi:type="string" translate="true">Po Number Required</item>
+            <item name="valueMap" xsi:type="array">
+                <item name="true" xsi:type="string">1</item>
+                <item name="false" xsi:type="string">0</item>
+            </item>
+            <item name="validation" xsi:type="array">
+                <item name="required-entry" xsi:type="boolean">false</item>
+            </item>
+            <item name="default" xsi:type="string">0</item>
+        	</item>
+        </argument>
+    </field>
+    <field name="credit_allow" formElement="checkbox">
+        <argument name="data" xsi:type="array">
+ 			<item name="config" xsi:type="array">
+           <!--  <item name="sortOrder" xsi:type="number">10</item> -->
+            <item name="dataType" xsi:type="string">boolean</item>
+            <item name="formElement" xsi:type="string">checkbox</item>
+            <item name="source" xsi:type="string">credit_allow</item>
+            <item name="prefer" xsi:type="string">toggle</item>
+            <item name="label" xsi:type="string" translate="true">Credit Allow</item>
+            <item name="valueMap" xsi:type="array">
+                <item name="true" xsi:type="string">1</item>
+                <item name="false" xsi:type="string">0</item>
+            </item>
+            <item name="validation" xsi:type="array">
+                <item name="required-entry" xsi:type="boolean">false</item>
+            </item>
+            <item name="default" xsi:type="string">0</item>
+        	</item>
+        </argument>
+    </field>
+    <field name="account_allow" formElement="checkbox">
+        <argument name="data" xsi:type="array">
+ 			<item name="config" xsi:type="array">
+           <!--  <item name="sortOrder" xsi:type="number">10</item> -->
+            <item name="dataType" xsi:type="string">boolean</item>
+            <item name="formElement" xsi:type="string">checkbox</item>
+            <item name="source" xsi:type="string">account_allow</item>
+            <item name="prefer" xsi:type="string">toggle</item>
+            <item name="label" xsi:type="string" translate="true">Account Allow</item>
+            <item name="valueMap" xsi:type="array">
+                <item name="true" xsi:type="string">1</item>
+                <item name="false" xsi:type="string">0</item>
+            </item>
+            <item name="validation" xsi:type="array">
+                <item name="required-entry" xsi:type="boolean">false</item>
+            </item>
+            <item name="default" xsi:type="string">0</item>
+        	</item>
+        </argument>
+        <settings>
+            <validation>
+                <rule name="required-entry" xsi:type="boolean">true</rule>
+            </validation>
+            <dataType>text</dataType>
+            <label translate="true">Parent Customer Number</label>
+        </settings>
+    </field>
+    <field name="customer_price_group" formElement="checkbox">
+        <argument name="data" xsi:type="array">
+ 			<item name="config" xsi:type="array">
+           <!--  <item name="sortOrder" xsi:type="number">10</item> -->
+            <item name="dataType" xsi:type="string">boolean</item>
+            <item name="formElement" xsi:type="string">checkbox</item>
+            <item name="source" xsi:type="string">customer_price_group</item>
+            <item name="prefer" xsi:type="string">toggle</item>
+            <item name="label" xsi:type="string" translate="true">Account Allow</item>
+            <item name="valueMap" xsi:type="array">
+                <item name="true" xsi:type="string">1</item>
+                <item name="false" xsi:type="string">0</item>
+            </item>
+            <item name="validation" xsi:type="array">
+                <item name="required-entry" xsi:type="boolean">true</item>
+            </item>
+            <item name="default" xsi:type="string">0</item>
+        	</item>
+        </argument>
+        <settings>
+            <validation>
+                <rule name="required-entry" xsi:type="boolean">true</rule>
+            </validation>
+            <dataType>text</dataType>
+            <label translate="true">Parent Customer Number</label>
+        </settings>
+    </field>
+    <field name="customer_price_group" formElement="input">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="source" xsi:type="string">customer_price_group</item>
+            </item>
+        </argument>
+        <settings>
+            <validation>
+                <rule name="required-entry" xsi:type="boolean">false</rule>
+            </validation>
+            <dataType>text</dataType>
+            <label translate="true">Customer Price Group</label>
+        </settings>
+    </field>
+    <field name="customer_group" formElement="input">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="source" xsi:type="string">customer_group</item>
+            </item>
+        </argument>
+        <settings>
+            <validation>
+                <rule name="required-entry" xsi:type="boolean">false</rule>
+            </validation>
+            <dataType>text</dataType>
+            <label translate="true">Customer Group</label>
+        </settings>
+    </field>
+</fieldset>
+<fieldset name="userinformation" sortOrder="30">
+        <settings>
+            <collapsible>true</collapsible>
+            <label translate="true">Manage User</label>
+            <dataScope>userinformation</dataScope>
+        </settings>
+       <container name="company-user-listing">
+        <htmlContent name="new-user-add">
+             <block class="Tychons\StoreManager\Block\Adminhtml\Company\Edit\AddUser" name="add_user" template="Tychons_StoreManager::adduser.phtml"/>
+        </htmlContent>
+        <insertListing name="companyuser_company_listing" component="Magento_Customer/js/form/components/insert-listing">
+            <settings>
+                <dataLinks>
+                    <exports>false</exports>
+                    <imports>true</imports>
+                </dataLinks>
+                <externalProvider>companyuser_company_listing.companyuser_company_listing_data_source</externalProvider>
+                <selectionsProvider>companyuser_company_listing.companyuser_company_listing.companyuser_company_listing_columns.ids</selectionsProvider>
+                <autoRender>true</autoRender>
+                <dataScope>companyuser_company_listing</dataScope>
+                <ns>companyuser_company_listing</ns>
+                <exports>
+                    <link name="parent_id">${ $.externalProvider }:params.parent_id</link>
+                </exports>
+                <imports>
+                    <link name="parent_id">${ $.provider }:data.customer.entity_id</link>
+                    <link name="onAction">ns = ${ $.ns }, index = actions:action</link>
+                    <link name="onMassAction">ns = ${ $.ns }, index = listing_massaction:massaction</link>
+                </imports>
+            </settings>
+        </insertListing>
+    </container>
+    </fieldset>
+</form>

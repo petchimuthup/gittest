@@ -1,0 +1,31 @@
+<?php
+
+$product = $block->getOrderedProduct();
+
+$product_id = $block->getProductId();
+
+?>
+
+<span class="addtostoreorder-button">
+ <button type="submit" id="addto-store" title="Add To Store Order" class="action primary" product_id= "<?= /* @escapeNotVerified */ $block->getProductId(); ?>" product_name ="<?= /* @escapeNotVerified */ $block->getProductName(); ?>" storeorder_url ="<?= /* @escapeNotVerified */ $block->getUrl("storeorder/index/index"); ?>" >
+        <span>Add To Store Order</span>
+    </button>
+</span>
+
+<span class="addtofavoriteorder-button">
+ <button type="submit" id="addto-favorite" title="Add To Favorite" class="action primary" product_id= "<?= /* @escapeNotVerified */ $block->getProductId(); ?>" product_name ="<?= /* @escapeNotVerified */ $block->getProductName(); ?>" favoriteorder_url ="<?= /* @escapeNotVerified */ $block->getUrl("favoriteorder/index/index"); ?>" >
+        <span>+ ADD TO FAVORITE</span>
+    </button>
+</span>
+
+<?php if (isset($product[$product_id])): ?>
+<div class="last-purchased-date">
+    <span class="last-pur-span">Last Purchased Date :</span>
+    <span id="last-pur-dat"><?= /* @escapeNotVerified */ $product[$product_id] ?></span>
+</div>
+<?php else: ?>
+<div class="last-purchased-date">
+    <span class="last-pur-span">Last Purchased Date :</span>
+    <span id="last-pur-dat">Not available</span>
+</div>    
+<?php endif; ?>

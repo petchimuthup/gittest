@@ -1,0 +1,331 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="ISN_EZGCheckout::css/ezg.css"/>
+	</head>
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <!-- Your customization will be here -->
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="component" xsi:type="string">uiComponent</item>
+                            <item name="config" xsi:type="array">
+                                <item name="template" xsi:type="string">Magento_Checkout/onepage</item>
+                            </item>
+                            <item name="children" xsi:type="array">
+
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+
+                                        <item name="shipping-step" xsi:type="array">
+                                            <item name="component" xsi:type="string">uiComponent</item>
+                                            <item name="sortOrder" xsi:type="string">1</item>
+                                            <item name="config" xsi:type="array">
+                                                <item name="componentDisabled" xsi:type="boolean">false</item>
+                                            </item>
+                                            <item name="children" xsi:type="array">
+                                               <item name="shippingAddress" xsi:type="array">
+                                                    <item name="config" xsi:type="array">
+                                                        <item name="componentDisabled" xsi:type="boolean">false</item>
+                                                        <item name="popUpForm" xsi:type="array">
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                            </item>
+                                                         </item>
+                                                    </item>
+                                                    <item name="component" xsi:type="string">ISN_EZGCheckout/js/view/shipping</item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="customer-email" xsi:type="array">
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                            </item>
+                                                        </item>
+                                                        <item name="before-form" xsi:type="array">
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                            </item>
+                                                        </item>
+                                                        <item name="before-fields" xsi:type="array">
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                            </item>
+                                                        </item>
+                                                        <item name="address-list" xsi:type="array">
+                                                            <item name="component" xsi:type="string">ISN_EZGCheckout/js/view/shipping-address/list</item>
+                                                            <item name="displayArea" xsi:type="string">address-list</item>
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">false</item>
+                                                            </item>
+                                                            <item name="children" xsi:type="array">
+                                                            	<item name="ship-to-address-diplay" xsi:type="array">
+																	<item name="component" xsi:type="string">ISN_EZGCheckout/js/view/address/address-item</item>
+																	<item name="sortOrder" xsi:type="string">1</item>
+																	<item name="children" xsi:type="array">
+																		<item name="shipToAttention" xsi:type="array">
+						                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/address/text</item>
+						                                                    <item name="config" xsi:type="array">
+						                                                    	<item name="formElement" xsi:type="string">text</item>
+						                                                    	<item name="inputName" xsi:type="string">attention</item>
+						                                                        <item name="uid" xsi:type="string">attention</item>
+						                                                        <item name="value" xsi:type="string"></item>
+						                                                    </item>
+						                                                </item>
+																	 	<item name="shipToCompanyName" xsi:type="array">
+						                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/address/text</item>
+						                                                    <item name="config" xsi:type="array">
+						                                                    	<item name="formElement" xsi:type="string">text</item>
+						                                                    	<item name="inputName" xsi:type="string">company_name</item>
+						                                                        <item name="uid" xsi:type="string">company_name</item>
+						                                                        <item name="value" xsi:type="string"></item>
+						                                                    </item>
+						                                                </item>
+						                                                <item name="shipToStreet" xsi:type="array">
+						                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/address/text</item>
+						                                                    <item name="config" xsi:type="array">
+						                                                    	<item name="formElement" xsi:type="string">text</item>
+						                                                    	<item name="inputName" xsi:type="string">street</item>
+						                                                        <item name="uid" xsi:type="string">street</item>
+						                                                        <item name="value" xsi:type="string"></item>
+						                                                    </item>
+						                                                </item>
+																	 	<item name="shipToCity" xsi:type="array">
+						                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/address/inline-text</item>
+						                                                    <item name="config" xsi:type="array">
+						                                                    	<item name="formElement" xsi:type="string">text</item>
+						                                                    	<item name="inputName" xsi:type="string">city</item>
+						                                                        <item name="uid" xsi:type="string">city</item>
+						                                                        <item name="value" xsi:type="string"></item>
+						                                                    </item>
+						                                                </item>
+						                                              	<item name="shipToRegion" xsi:type="array">
+						                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/address/inline-text</item>
+						                                                    <item name="config" xsi:type="array">
+						                                                    	<item name="formElement" xsi:type="string">text</item>
+						                                                    	<item name="inputName" xsi:type="string">region</item>
+						                                                        <item name="uid" xsi:type="string">region</item>
+						                                                        <item name="value" xsi:type="string"></item>
+						                                                    </item>
+						                                                </item>
+						                                                <item name="shipToCountry" xsi:type="array">
+						                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/address/inline-text</item>
+						                                                    <item name="config" xsi:type="array">
+						                                                    	<item name="formElement" xsi:type="string">text</item>
+						                                                    	<item name="inputName" xsi:type="string">country_id</item>
+						                                                        <item name="uid" xsi:type="string">country_id</item>
+						                                                        <item name="value" xsi:type="string"></item>
+						                                                    </item>
+						                                                </item>
+																	 	<item name="shipToPostCode" xsi:type="array">
+						                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/address/text</item>
+						                                                    <item name="config" xsi:type="array">
+						                                                    	<item name="formElement" xsi:type="string">text</item>
+						                                                    	<item name="inputName" xsi:type="string">postcode</item>
+						                                                        <item name="uid" xsi:type="string">postcode</item>
+						                                                        <item name="value" xsi:type="string"></item>
+						                                                    </item>
+						                                                </item>
+																	 	<item name="shipToEmail" xsi:type="array">
+						                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/address/text</item>
+						                                                    <item name="config" xsi:type="array">
+						                                                    	<item name="formElement" xsi:type="string">text</item>
+						                                                    	<item name="inputName" xsi:type="string">email</item>
+						                                                        <item name="uid" xsi:type="string">email</item>
+						                                                        <item name="value" xsi:type="string"></item>
+						                                                    </item>
+						                                                </item>
+																	 	<item name="shipToTelephone" xsi:type="array">
+						                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/address/text</item>
+						                                                    <item name="config" xsi:type="array">
+						                                                    	<item name="formElement" xsi:type="string">text</item>
+						                                                    	<item name="inputName" xsi:type="string">telephone</item>
+						                                                        <item name="uid" xsi:type="string">telephone</item>
+						                                                        <item name="value" xsi:type="string"></item>
+						                                                    </item>
+						                                                </item>
+																	        
+																	</item>
+																</item>
+ 															</item>
+		                                                            
+                                                        </item>
+                                                        <item name="address-list-additional-addresses" xsi:type="array">
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                            </item>
+                                                        </item>
+                                                        <item name="before-shipping-method-form" xsi:type="array">
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                            </item>
+                                                        </item>
+                                                        <item name="shipping-address-fieldset" xsi:type="array">
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                            </item>
+                                                         </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+
+                                        <item name="billing-step" xsi:type="array">
+                                            <item name="component" xsi:type="string">uiComponent</item>
+                                            <item name="children" xsi:type="array">
+ 
+
+                                                <item name="payment" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">10</item>
+                                                    <item name="children" xsi:type="array">
+
+                                                        <item name="afterMethods" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                               <item name="discount" xsi:type="array">
+                                                                    <item name="config" xsi:type="array">
+                                                                        <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                                    </item>
+                                                                </item>
+                                                                <item name="giftCardAccount" xsi:type="array">
+                                                                    <item name="config" xsi:type="array">
+                                                                        <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                                    </item>
+                                                                </item>
+                                                           </item>
+                                                        </item>
+                                                        <item name="payments-list" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="before-place-order" xsi:type="array">
+                                                                    <item name="children" xsi:type="array">
+                                                                        <item name="gift-card-information" xsi:type="array">
+                                                                            <item name="config" xsi:type="array">
+                                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                                            </item>
+                                                                        </item>
+
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+
+                                    </item>
+                                </item>
+
+                                <item name="sidebar" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+										<item name="shipping-information" xsi:type="array">
+										    <item name="component" xsi:type="string">ISN_EZGCheckout/js/view/shipping-information</item>
+										    <item name="config" xsi:type="array">
+										        <item name="deps" xsi:type="string">checkout.steps.shipping-step.shippingAddress</item>
+										    </item>
+										    <item name="displayArea" xsi:type="string">shipping-information</item>
+										    <item name="children" xsi:type="array">
+										        <item name="ship-to" xsi:type="array">
+										            <item name="component" xsi:type="string">ISN_EZGCheckout/js/view/shipping-information/list</item>
+										            <item name="displayArea" xsi:type="string">ship-to</item>
+										            <item name="children" xsi:type="array">
+														<item name="shipToAttention" xsi:type="array">
+		                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/summary-address/text</item>
+		                                                    <item name="config" xsi:type="array">
+		                                                    	<item name="formElement" xsi:type="string">text</item>
+		                                                    	<item name="inputName" xsi:type="string">attention</item>
+		                                                        <item name="uid" xsi:type="string">attention</item>
+		                                                        <item name="value" xsi:type="string"></item>
+		                                                    </item>
+		                                                </item>
+													 	<item name="shipToCompanyName" xsi:type="array">
+		                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/summary-address/text</item>
+		                                                    <item name="config" xsi:type="array">
+		                                                    	<item name="formElement" xsi:type="string">text</item>
+		                                                    	<item name="inputName" xsi:type="string">company_name</item>
+		                                                        <item name="uid" xsi:type="string">company_name</item>
+		                                                        <item name="value" xsi:type="string"></item>
+		                                                    </item>
+		                                                </item>
+		                                                <item name="shipToStreet" xsi:type="array">
+		                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/summary-address/text</item>
+		                                                    <item name="config" xsi:type="array">
+		                                                    	<item name="formElement" xsi:type="string">text</item>
+		                                                    	<item name="inputName" xsi:type="string">street</item>
+		                                                        <item name="uid" xsi:type="string">street</item>
+		                                                        <item name="value" xsi:type="string"></item>
+		                                                    </item>
+		                                                </item>
+													 	<item name="shipToCity" xsi:type="array">
+		                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/summary-address/inline-text</item>
+		                                                    <item name="config" xsi:type="array">
+		                                                    	<item name="formElement" xsi:type="string">text</item>
+		                                                    	<item name="inputName" xsi:type="string">city</item>
+		                                                        <item name="uid" xsi:type="string">city</item>
+		                                                        <item name="value" xsi:type="string"></item>
+		                                                    </item>
+		                                                </item>
+		                                              	<item name="shipToRegion" xsi:type="array">
+		                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/summary-address/inline-text</item>
+		                                                    <item name="config" xsi:type="array">
+		                                                    	<item name="formElement" xsi:type="string">text</item>
+		                                                    	<item name="inputName" xsi:type="string">region</item>
+		                                                        <item name="uid" xsi:type="string">region</item>
+		                                                        <item name="value" xsi:type="string"></item>
+		                                                    </item>
+		                                                </item>
+		                                                <item name="shipToCountry" xsi:type="array">
+		                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/summary-address/inline-text</item>
+		                                                    <item name="config" xsi:type="array">
+		                                                    	<item name="formElement" xsi:type="string">text</item>
+		                                                    	<item name="inputName" xsi:type="string">country_id</item>
+		                                                        <item name="uid" xsi:type="string">country_id</item>
+		                                                        <item name="value" xsi:type="string"></item>
+		                                                    </item>
+		                                                </item>
+													 	<item name="shipToPostCode" xsi:type="array">
+		                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/summary-address/text</item>
+		                                                    <item name="config" xsi:type="array">
+		                                                    	<item name="formElement" xsi:type="string">text</item>
+		                                                    	<item name="inputName" xsi:type="string">postcode</item>
+		                                                        <item name="uid" xsi:type="string">postcode</item>
+		                                                        <item name="value" xsi:type="string"></item>
+		                                                    </item>
+		                                                </item>
+													 	<item name="shipToEmail" xsi:type="array">
+		                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/summary-address/text</item>
+		                                                    <item name="config" xsi:type="array">
+		                                                    	<item name="formElement" xsi:type="string">text</item>
+		                                                    	<item name="inputName" xsi:type="string">email</item>
+		                                                        <item name="uid" xsi:type="string">email</item>
+		                                                        <item name="value" xsi:type="string"></item>
+		                                                    </item>
+		                                                </item>
+													 	<item name="shipToTelephone" xsi:type="array">
+		                                                    <item name="component"  xsi:type="string">ISN_EZGCheckout/js/view/summary-address/text</item>
+		                                                    <item name="config" xsi:type="array">
+		                                                    	<item name="formElement" xsi:type="string">text</item>
+		                                                    	<item name="inputName" xsi:type="string">telephone</item>
+		                                                        <item name="uid" xsi:type="string">telephone</item>
+		                                                        <item name="value" xsi:type="string"></item>
+		                                                    </item>
+		                                                </item>
+													        
+													</item>
+	                                                        
+										        </item>
+										    </item>
+										</item>
+                                   
+ 
+                                    </item>
+                                </item>
+
+                            </item>
+                        </item>
+                    </item>
+
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
+

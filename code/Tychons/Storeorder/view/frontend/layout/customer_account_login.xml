@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Tychons\Storeorder\Block\Logo" name="store-logo" before="customer.login.container" template="Tychons_Storeorder::logo.phtml">
+            </block>
+            <referenceContainer name="header-wrapper" remove="true"/>
+
+            <referenceBlock name="catalog.topnav" remove="true"/>
+            <referenceContainer name="footer" remove="true" />
+            <referenceBlock name="customer.new" remove="true"/>
+            <referenceBlock name="company.new.wrapper" remove="true"/>
+            <referenceContainer name="footer-container" remove="true"/>
+            <referenceBlock name="navigation.sections" remove="true"/>
+        </referenceContainer>
+    </body>
+</page>

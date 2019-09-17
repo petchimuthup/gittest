@@ -1,0 +1,9 @@
+.shipping-information .ship-to .shipping-information-content {
+	visibility:collapse;
+	line-height: 0px;
+}
+
+.shipping-information .ship-to .shipping-information-content .order-review-summary-address-element {
+	visibility:visible;
+	line-height: 1.5em;
+}

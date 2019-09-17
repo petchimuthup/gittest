@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="Tychons_Storeorder::js/addtostoreorder-list.js"/>
+    </head>
+    <body>
+        <referenceBlock name="category.product.addto">
+            <block class="Tychons\Storeorder\Block\Product\ListProduct" name="product.addtostoreorder.list" before="-"
+                   template="Tychons_Storeorder::addtostoreorder-list.phtml"/>
+        </referenceBlock>
+
+        <referenceBlock name="category.products.list">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Tychons_Storeorder::catalog/product/list.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

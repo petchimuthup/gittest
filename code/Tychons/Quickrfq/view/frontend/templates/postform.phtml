@@ -1,0 +1,171 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<form class="form quickrfq"
+      action="<?php /* @escapeNotVerified */
+      echo $block->getFormAction(); ?>"
+      id="quickrfq_form"
+      enctype="multipart/form-data"
+      method="post"
+      onsubmit="return myFunction2()"
+      data-hasrequired="<?php /* @escapeNotVerified */
+      echo __('* Required Fields') ?>"
+      data-mage-init='{"validation":{}}'>
+
+
+    <fieldset class="fieldset">
+        <legend class="legend"><span><?php /* @escapeNotVerified */
+                echo __('Request Part Number') ?></span></legend>
+        <div class="part_number">
+       <span class="request-part-number">
+Products not added to this store
+Enter the following information to request a part number that you would like added to the website. This information will be sent to the Commercial Tire site administrator.</span>
+        </div>
+        <div class="field name required">
+            <label class="label" for="company"><?php echo __('Company Name:') ?></label>
+            <div class="control">
+                <input name="company" id="company" value="" class="input-text" type="text"
+                       data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field contact_name required">
+            <label class="label" for="contact_name"><span><?php /* @escapeNotVerified */
+                    echo __('Contact Name') ?></span></label>
+            <div class="control">
+                <input name="contact_name" id="contact_name" title="<?php /* @escapeNotVerified */
+                echo __('Contact Name') ?>"
+                       value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getUserName()) ?>"
+                       class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email"><span><?php /* @escapeNotVerified */
+                    echo __('Email') ?></span></label>
+            <div class="control">
+                <input name="email" id="email" title="<?php /* @escapeNotVerified */
+                echo __('Email') ?>"
+                       value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getUserEmail()) ?>"
+                       class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+        <div class="field phone">
+            <label class="label" for="phone"><span><?php /* @escapeNotVerified */
+                    echo __('Store Part Number') ?></span></label>
+            <div class="control">
+                <input name="phone" id="phone" title="<?php /* @escapeNotVerified */
+                echo __('Phone Number') ?>" value="" class="input-text" type="text"/>
+            </div>
+        </div>
+        <div class="field description">
+            <label class="label" for="description"><span><?php /* @escapeNotVerified */
+                    echo __('Description') ?></span></label>
+            <div class="control">
+                <input name="description" id="description" title="<?php /* @escapeNotVerified */
+                echo __('Description') ?>" value="" class="input-text" type="text"/>
+            </div>
+        </div>
+        <!--<div class="field date">
+            <label class="label" for="date"><span><?php /* @escapeNotVerified */
+        echo __('Quote Needed By') ?></span></label>
+            <div class="control">
+                <input name="date" id="date" title="<?php /* @escapeNotVerified */
+        echo __('Quote Needed By') ?>" value="" class="hasDatepicker" type="text" />
+                
+            </div>
+        </div>-->
+
+        <?php $_date = $block->getLayout()->createBlock('Tychons\Quickrfq\Block\Widget\DateQuote') ?>
+        <?php if ($_date->isEnabled()): ?>
+            <?php echo $_date->toHtml() ?>
+        <?php endif ?>
+
+
+        <div class="field notes required">
+            <label class="label" for="notes"><span><?php /* @escapeNotVerified */
+                    echo __('Brief notes') ?></span></label>
+            <div class="control">
+                <textarea name="notes" id="notes" title="<?php /* @escapeNotVerified */
+                echo __('Brief notes') ?>" class="input-text" cols="5" rows="3"
+                          data-validate="{required:true}"></textarea>
+            </div>
+        </div>
+
+
+        <div class="field">
+
+            <?php if ($block->isCaptchaEnable()): ?>
+                <div class="g-recaptcha" name="recaptcha" id="recaptcha"
+                     data-sitekey="<?php echo $block->getPublicKey(); ?>"></div>
+                <div><p style="
+    cursor: auto;
+    /* text-decoration: underline; */
+    color: #9b9b9b;
+    padding-left: 235px;
+    font-family: Roboto,helvetica,arial,sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    margin-top: -35px;
+">by <a style="color: #9b9b9b;" rel="no-follow" target="_Blank"
+        href="https://www.tychonsextensions.com/request-for-quote-magento-2.html">Fmeextensions</a></p></div>
+                <br>
+
+
+            <?php endif; ?>
+        </div>
+
+
+        <?php echo $block->getChildHtml('form.additional.info'); ?>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value=""/>
+            <button type="submit" title="<?php /* @escapeNotVerified */
+            echo __('Submit') ?>" class="action submit primary">
+                <span><?php /* @escapeNotVerified */
+                    echo __('Submit') ?></span>
+            </button>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+    function myFunction2() {
+        var exists = document.getElementById("g-recaptcha-response");
+
+        if (exists == null) {
+
+        } else {
+
+            var check = document.getElementById("g-recaptcha-response").value;
+            // alert(check);
+            if (check == '' || check == null) {
+                document.getElementById("recaptcha").style.border = "1px solid #ea0e0e";
+                return false;
+            } else {
+                document.getElementById("recaptcha").style.border = "none";
+                return true;
+            }
+        }
+
+
+    }
+</script>
+
+
+<style type="text/css">
+
+    #recaptcha {
+        display: inline-block;
+        position: relative;
+
+
+    }
+
+</style>

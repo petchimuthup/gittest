@@ -1,0 +1,20 @@
+<?php 
+$storeList = $this->userStoreList();
+
+$userRole = $this->userRole();
+
+?>
+<?php if (!empty($storeList) && !empty($userRole)) { ?>
+
+<div class="field store-switch required">
+    <div class="control">
+        <select data-role="store_switch" name="store_switch" id="store-switch">
+            <?php foreach ($storeList as $key => $store) : ?>
+                <option value="<?php echo $store['entity_id']; ?>" 
+                	<?php if ($store['entity_id'] == $this->getActiveStoreId() ) {?> selected <?php } ?> >
+                	<?php echo $store['company_name']; ?></option>
+            <?php endforeach ; ?>
+        </select>
+    </div>
+</div>
+<?php } ?>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <order_history>
+            <general>
+                <ORDER_HEADER_ENDPOINT>http://isnvwhwebdev.toolweb.com:/RestServiceImpl.svc/Json/HybrisOrderHeaders/</ORDER_HEADER_ENDPOINT>
+                <ORDER_DETAIL_ENDPOINT>http://isnvwhwebdev:8888/RestServiceImpl.svc/Json/HybrisOrderDetails/</ORDER_DETAIL_ENDPOINT>
+                <INVOICEH_HEADER_ENDPOINT>http://isnvwhwebdev.toolweb.com:/RestServiceImpl.svc/Json/InvoiceHeader/</INVOICEH_HEADER_ENDPOINT>
+                <INVOICE_DETAIL_ENDPOINT>http://isnvwhwebdev.toolweb.com:/RestServiceImpl.svc/Json/InvoiceDetail/ISN/{0}/{1}</INVOICE_DETAIL_ENDPOINT>
+                <CREDIT_HEADER_ENDPOINT>http://isnvwhwebdev.toolweb.com:/RestServiceImpl.svc/Json/CreditHeader/</CREDIT_HEADER_ENDPOINT>
+                <CREDIT_DETAIL_ENDPOINT>http://isnvwhwebdev.toolweb.com:/RestServiceImpl.svc/Json/CreditDetail/ISN/{0}/{1}</CREDIT_DETAIL_ENDPOINT>
+                <STATEMENTS_ENDPOINT>http://isnvwhwebdev.toolweb.com:/RestServiceImpl.svc/Json/StatementHeader/ISN/{0}</STATEMENTS_ENDPOINT>
+                <BACKORDER_SUMMARY_ENDPOINT>http://isnvwhwebdev.toolweb.com:/RestServiceImpl.svc/Json/HybrisOrders/</BACKORDER_SUMMARY_ENDPOINT>
+                <PURCHASE_DETAIL_ENDPOINT>http://isnvwhwebdev.toolweb.com:/RestServiceImpl.svc/Json/PurchaseDetail</PURCHASE_DETAIL_ENDPOINT>
+                <PURCHASE_SUMMARY_ENDPOINT>http://isnvwhwebdev.toolweb.com:/RestServiceImpl.svc/Json/PurchaseSummary</PURCHASE_SUMMARY_ENDPOINT>
+                <WEBSERVICE_PORT>8888</WEBSERVICE_PORT>
+            </general>
+        </order_history>
+        <crystal_report>
+            <general>
+                <CREDIT_DOCUMENT_ENDPOINT>{0}:/BOE/OpenDocument/1302051806/CrystalReports/viewrpt.cwr?apspassword={1}&amp;EXPORT_FMT=U2FPDF%3A0&amp;cmd=EXPORT&amp;prompt0=ISNI&amp;prompt1={2}&amp;id={3}&amp;apsauthtype=secEnterprise&amp;apsuser={4}</CREDIT_DOCUMENT_ENDPOINT>
+                <STATEMENT_DOCUMENT_ENDPOINT>{0}:/BOE/OpenDocument/1302051806/CrystalReports/viewrpt.cwr?apspassword={1}&amp;EXPORT_FMT=U2FPDF%3A0&amp;cmd=EXPORT&amp;prompt1={2}&amp;prompt0={3}&amp;id={4}&amp;apsauthtype=secEnterprise&amp;apsuser={5}</STATEMENT_DOCUMENT_ENDPOINT>
+                <INVOICE_DOCUMENT_ENDPOINT>{0}:/BOE/OpenDocument/1302051806/CrystalReports/viewrpt.cwr?apspassword={1}&amp;EXPORT_FMT=U2FPDF%3A0&amp;cmd=EXPORT&amp;prompt0=ISNI&amp;prompt1={2}&amp;id={3}&amp;apsauthtype=secEnterprise&amp;apsuser={4}</INVOICE_DOCUMENT_ENDPOINT>
+                <CRYSTAL_ENDPOINT>http://isn-vw-crystal1.toolweb.com</CRYSTAL_ENDPOINT>
+                <CRYSTAL_PASSWORD>Crystal123</CRYSTAL_PASSWORD>
+                <CRYSTAL_USER>Administrator</CRYSTAL_USER>
+                <CRYSTAL_CREDIT_DOCUMENT_ID>11402</CRYSTAL_CREDIT_DOCUMENT_ID>
+                <CRYSTAL_STATEMENT_DOCUMENT_ID>6307</CRYSTAL_STATEMENT_DOCUMENT_ID>
+                <CRYSTAL_INVOICE_DOCUMENT_ID>189750</CRYSTAL_INVOICE_DOCUMENT_ID>
+                <CRYSTAL_PORT>8080</CRYSTAL_PORT>
+            </general>
+        </crystal_report>
+    </default>
+</config>

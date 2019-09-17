@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Tychons_Favoriteorder::css/addtofavoriteorder.css"/>
+        <link src="Tychons_Favoriteorder::js/addtofavoriteorder.js"/>
+    </head>
+    <body>
+        <referenceBlock name="product.info.addtocart">
+            <block class="Tychons\Favoriteorder\Block\Product\View" name="product.addtofavoriteorder"
+                   template="Tychons_Favoriteorder::addtofavoriteorder-view.phtml" after="-"/>
+        </referenceBlock>
+
+    </body>
+</page>

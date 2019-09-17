@@ -1,0 +1,191 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php /** @var \Tychons\StoreManager\Block\Adminhtml\Company\Edit\AddUser $block */ ?>
+
+<div class="custom-page-actions-buttons">
+    <button id="add-user" title="Add New User" class="action- scalable primary add-user">
+        <span>Add New User</span>
+    </button>
+</div>
+<div id="messages" class="response-msg" style="display: none;">
+    <div class="messages">
+        <div class="message message-success success">
+            <div data-ui-id="messages-message-success">User has been created </div>
+        </div>
+    </div>
+</div>
+<form class="form" id="custom-form" method="post" action="<?= $block->getUrl('companyuser/store/adminuser'); ?>" type="button" autocomplete="off" style="display:none;">
+   <fieldset class="admin__fieldset">
+        <div class="admin__field _required">
+            <div class="admin__field-label">
+            <label>
+                <span>First Name</span>
+            </label>
+            </div>
+            <div class="admin__field-control">
+                <input class="admin__control-text" type="text" name="firstname" id="firstname" maxlength="255" data-validate="{required:true}">
+                <input type="hidden"  name="store_id" value="1">
+            </div>
+        </div>
+        <div class="admin__field _required">
+            <div class="admin__field-label">
+            <label>
+                <span>Last Name</span>
+            </label>
+            </div>
+            <div class="admin__field-control">
+                <input class="admin__control-text" type="text" name="lastname" id="lastname" maxlength="255" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="admin__field _required">
+            <div class="admin__field-label">
+            <label>
+                <span>Email</span>
+            </label>
+            </div>
+            <div class="admin__field-control">
+                <input class="admin__control-text" type="text" name="email" id="email" maxlength="255" data-validate="{required:true, 'validate-email':true}">
+            </div>
+        </div>
+        <div class="admin__field _required">
+            <div class="admin__field-label">
+            <label>
+                <span>User Role</span>
+            </label>
+            </div>
+            <div class="admin__field-control">
+                <select class="admin__control-select" data-role="role-select" name="role" id="role" data-validate="{required:true}">
+                        <option value="2">Manager</option>
+                        <option value="3">Employee</option>
+                </select>
+            </div>
+        </div>
+        <div class="admin__field _required">
+            <div class="admin__field-label">
+            <label>
+                <span>Password</span>
+            </label>
+            </div>
+            <div class="admin__field-control">
+                <input class="admin__control-text" type="password" id="password" name="password" maxlength="255" data-validate="{required:true, 'validate-password':true}">
+            </div>
+        </div>
+        <div class="admin__field _required">
+            <div class="admin__field-label">
+            <label>
+                <span>Confirm Password</span>
+            </label>
+            </div>
+            <div class="admin__field-control">
+                <input class="admin__control-text" type="password" name="conf_password" id="conf_password" maxlength="255" data-validate="{required:true, equalTo:'#password'}">
+            </div>
+        </div>
+        <div class="admin__field _required">
+            <div class="admin__field-label">
+            <label>
+                <span>Status</span>
+            </label>
+            </div>
+            <div class="admin__field-control">
+                <select class="admin__control-select" data-role="status-select" name="status" id="status" data-validate="{required:true}">
+                    <option value="1">Active</option>
+                    <option value="0">Inactive</option>
+                </select>
+            </div>
+        </div>
+   </fieldset>
+   <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary save-user" title="<?php  echo __('Submit') ?>"><span><?php echo __('Save') ?></span></button>  
+            <button type="submit" class="action submit primary close-user" title="<?php  echo __('Cancel') ?>"><span><?php echo __('Cancel') ?></span></button>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+require([
+    'jquery',
+    'reloadGrid',
+    'mage/mage'
+], function ($,reloadGrid) {
+    'use strict';
+
+    $(document).ready(function(){
+
+        //validate form
+
+        var dataForm = $('#custom-form');
+
+        dataForm.mage('validation', {});
+
+        //open form slide
+
+        $("button#add-user").on("click",function(){
+
+            $("#custom-form").slideToggle("slow");
+
+            if ($('#custom-form').valid()) 
+            {
+                alert("Validation pass");
+                return false;
+            }
+        });
+
+        //cancel user
+
+        $(".close-user").on("click",function(){
+
+            $("#custom-form").slideUp("slow");
+        });
+
+        //save user 
+
+        $(".save-user").on("click",function(e){
+
+            if ($('#custom-form').valid()) 
+            {
+
+                var url = $("#custom-form").attr("action");
+
+                var formdata = $("#custom-form").serialize();
+
+                e.preventDefault();
+
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    dataType: 'json',
+                    showLoader: true,
+                    data: formdata,
+                    cache: false,
+                    success: function(response){
+
+                        $("#custom-form").trigger("reset").slideUp("slow");
+
+                        $(".response-msg").show();
+
+                        //reloadGrid.reloadUIComponent("customer_listing.customer_listing_data_source");
+
+                        console.log(response);
+
+                        setTimeout(function(){
+                             
+                             $(".response-msg").hide();
+
+                             window.location.reload();
+
+                         }, 2000);
+                    }
+                });
+
+            }
+        });
+    });
+});
+</script>

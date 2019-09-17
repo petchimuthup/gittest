@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="https://da7xgjtj801h2.cloudfront.net/2018.2.620/styles/kendo.common.min.css" src_type="url"/>
+        <css src="https://da7xgjtj801h2.cloudfront.net/2018.2.620/styles/kendo.silver.min.css" src_type="url"/>
+        <css src="ISN_PurchaseSummary::css/purchase-summary.css"/>
+        <link src="ISN_PurchaseSummary::js/purchasesummary.js"/>
+    </head>
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Purchase Order Summary</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="ISN\PurchaseSummary\Block\Main" name="isn_purchasesummary_block_main" template="ISN_PurchaseSummary::summary.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

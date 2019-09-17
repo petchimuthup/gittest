@@ -1,0 +1,18 @@
+<div>
+    <form id="order-comments-form" class="form" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
+        <label for="comments" class="label">
+            <span><!-- ko i18n: 'Order Comments'--><!-- /ko --></span>
+        </label>
+        <div class="control">
+            <textarea class="textarea isn-checkout-comments"
+                      data-bind="   attr: {
+                                        name: inputName,
+                                        cols: cols,
+                                        rows: rows,
+                                        placeholder: placeholder,
+                                        id: uid}"/>
+        </div>
+
+    </form>
+</div>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<!--      <head>
+        <css src="Tychons_Storeorder::css/storecart.css"/>
+        <link src="Tychons_Storeorder::js/storecart.js"/>
+    </head> -->
+    <body>
+    	<referenceContainer name="header-wrapper">
+            <block class="Tychons\Storeorder\Block\Product\View" name="custom-store-order" after="minicart" template="Tychons_Storeorder::storeorder.phtml" />
+        </referenceContainer>
+   </body>
+</page>

@@ -1,0 +1,430 @@
+<?php
+
+$loggedCustomer = $block->getCustomerId();
+$productCollection = $block->getStoreProduct();
+$activeStoreId = $block->getPresentStoreId();
+$presentUserProduct = $block->getLoggedUserProduct();
+$userRole = $block->getActiveUserRole();
+
+?>
+
+
+<?php if ($productCollection || $presentUserProduct): ?>
+
+
+    <div class="toolbar-sorter sorter">
+        <label class="sorter-label" for="sorter">Sort By</label>
+        <select class="sorting type-regular" name="sorting">
+            <option selected enable>Default</option>
+            <option value="asc">Product Name :Ascending</option>
+            <option value="desc">Product Name:Descending</option>
+            <option value="l2h">Price:Low to high</option>
+            <option value="h2l">Price:High to low</option>
+        </select>
+    </div>
+
+    <div class="products wrapper products-grid">
+        <ol class="products grid items product-items">
+            <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
+            <?php foreach ($presentUserProduct as $products): ?>
+                <?php foreach ($products['products'] as $_product): ?>
+                    <li class="item product product-item" data-price="<?= /* @escapeNotVerified */
+                    $_product['price'] ?>" data-name="<?= /* @escapeNotVerified */
+                    $_product['name'] ?>">
+                        <div class="product-item-info" data-container="product-grid">
+                            <?php if ($products['customer_id'] == $loggedCustomer): ?>
+                                <div class="del-product" post-url="<?= /* @escapeNotVerified */
+                                $block->getUrl("storeorder/index/productdelete"); ?>"
+                                     product-id="<?= /* @escapeNotVerified */
+                                     $_product['productid'] ?>" item-id="<?= /* @escapeNotVerified */
+                                $products['entity_id'] ?>"><img class="delete-img"
+                                                              src="https://test.commercialtireezgarage.com/pub/media/delete.png">
+                                </div>
+                            <?php endif; ?>
+                            <a href="<?= /* @escapeNotVerified */
+                            $_product['product_url'] ?>" class="product photo product-item-photo" tabindex="-1">
+                   <span class="product-image-container" style="width:240px;">
+                    <span class="product-image-wrapper" style="padding-bottom: 125%;">
+                        <img class="product-image-photo" src="<?= /* @escapeNotVerified */
+                        $_product['image'] ?>" max-width="240" max-height="300" alt="<?= /* @escapeNotVerified */
+                        $_product['name'] ?>">
+                    </span>
+                    </span>
+                            </a>
+                            <div class="product details product-item-details">
+                                <strong class="product name product-item-name">
+                                    <a class="product-item-link"
+                                       href="<?= /* @escapeNotVerified */
+                                       $_product['product_url'] ?>">
+                                        <?= /* @escapeNotVerified */
+                                        $_product['name'] ?>
+                                    </a>
+                                </strong>
+                                <div class="price-box price-final_price" data-role="priceBox"
+                                     data-product-id="<?= /* @escapeNotVerified */
+                                     $_product['productid'] ?>" data-price-box="product-id-<?= /* @escapeNotVerified */
+                                $_product['productid'] ?>">
+                    <span class="price-container price-final_price tax weee">
+                    <span id="product-price-<?= /* @escapeNotVerified */
+                    $_product['productid'] ?>"
+                          data-price-amount="<?= /* @escapeNotVerified */
+                          $_product['price'] ?>"
+                          data-price-type="finalPrice" class="price-wrapper ">
+                        <span class="price"><?= /* @escapeNotVerified */
+                            $block->getCurrencySymbol(); ?>$<?= /* @escapeNotVerified */
+                            $_product['price'] ?></span></span>
+                    </span>
+                                </div>
+                                <?php if ($products['customer_id'] == $loggedCustomer): ?>
+                                <?php endif; ?>
+                                <div class="product-item-inner">
+                                    <div class="product actions product-item-actions">
+                                        <div class="actions-primary">
+                                            <input type="button" value="update" class="qty-update"
+                                                   product-id="<?= /* @escapeNotVerified */
+                                                   $_product['productid'] ?>" item-id="<?= /* @escapeNotVerified */
+                                            $products['entity_id'] ?>" style="display:none;">
+                                        </div>
+                                        <?php if ($products['customer_id'] == $loggedCustomer): ?>
+                                            <div class="addtostoreorder-btn">
+                                                <button type="submit" id="addto-store" title="Add To Store Order"
+                                                        class="action primary addto-store-<?= /* @escapeNotVerified */
+                                                        $_product['productid'] ?>"
+                                                        product_id="<?= /* @escapeNotVerified */
+                                                        $_product['productid'] ?>"
+                                                        product_name="<?= /* @escapeNotVerified */
+                                                        $_product['productid'] ?>"
+                                                        storeorder_url="<?= /* @escapeNotVerified */
+                                                        $block->getUrl("storeorder/index/index"); ?>">
+                                                    <span>Add To Store Order</span>
+                                                </button>
+                                            </div>
+                                            <div class="actions-primary">
+                                                <form data-role="tocart-form"
+                                                      data-product-sku="<?= $block->escapeHtml($_product['sku']) ?>"
+                                                      action="<?= /* @NoEscape */
+                                                      $_product['addtocart'] ?>" method="post">
+                                                    <input type="hidden" name="product"
+                                                           value="<?= /* @escapeNotVerified */
+                                                           $_product['productid'] ?>">
+                                                    <?= $block->getBlockHtml('formkey') ?>
+                                                    <button type="submit" product_id="<?= /* @escapeNotVerified */
+                                                    $_product['productid'] ?>" item_id="<?= /* @escapeNotVerified */
+                                                    $products['entity_id'] ?>"
+                                                            title="<?= $block->escapeHtml(__('Add to Rush Order')) ?>"
+                                                            class="action tocart primary moveto-rush">
+                                                        <span><?= /* @escapeNotVerified */
+                                                            __('Add to Rush Order') ?></span>
+                                                    </button>
+                                                </form>
+                                            </div>
+
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                    </li>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
+        </ol>
+    </div>
+<?php else: ?>
+    <span class="favorite-product-empty">
+Products not added to this store
+</span>
+<?php endif; ?>
+
+
+<script type="text/javascript">
+    require([
+        'jquery',
+        'jquery/ui',
+        'uiComponent'
+    ], function ($) {
+
+        $(document).on("change", ".sorting", function () {
+
+            var sortingMethod = $(this).val();
+            if (sortingMethod == 'l2h') {
+                sortProductsPriceAscending();
+            } else if (sortingMethod == 'h2l') {
+                sortProductsPriceDescending();
+            } else if (sortingMethod == 'asc') {
+                sortProductsNameAscending();
+            } else if (sortingMethod == 'desc') {
+                sortProductsNameDescending();
+            }
+
+        });
+
+        function sortProductsPriceAscending() {
+            var products = $('.product-item');
+
+            products.sort(function (a, b) {
+                return $(a).data("price") - $(b).data("price");
+            });
+
+            $(".products-grid").html(products);
+             $("button#addto-store").on("click",function(e){
+
+            e.preventDefault();
+            
+            $(this).prop("disabled",true);
+
+            $(this).find("span").html("Adding");
+
+            let qty = 1;
+
+            let productId = $(this).attr("product_id");
+
+            let productName = $(this).attr("product_name");
+
+            let url = $(this).attr("storeorder_url"); 
+
+
+
+            $.ajax({
+                url: BASE_URL+'storeorder/store/index',
+                type: "POST",
+                data: {
+                       qty:qty,
+                       product_id:productId,
+                       isAjax : true
+                      },
+                cache: false,
+                success: function(response){
+                    if(response.status)
+                    {
+                        $(".addto-store-"+productId).find("span").html("Added");
+
+                        setTimeout(function(){ 
+
+                            $(".addto-store-"+productId).prop("disabled",false);
+
+                            $(".addto-store-"+productId).find("span").html("Add To Storeorder");
+
+                        }, 1000);
+
+                        $(".page.messages").html('<div role="alert" class="messages"><div class="message-success success message" data-ui-id="message-success"><div>You have added to your favorite product to <a href="'+url+'"> Store Order</a></div></div></div>');
+
+                    }else{
+
+                        alert("something went wrong!");
+                    }
+                }
+            });
+
+        });   
+
+        }
+
+        function sortProductsPriceDescending() {
+            var products = $('.product-item');
+            products.sort(function (a, b) {
+                return $(b).data("price") - $(a).data("price")
+            });
+
+            $(".products-grid").html(products);
+             $("button#addto-store").on("click",function(e){
+
+            e.preventDefault();
+            
+            $(this).prop("disabled",true);
+
+            $(this).find("span").html("Adding");
+
+            let qty = 1;
+
+            let productId = $(this).attr("product_id");
+
+            let productName = $(this).attr("product_name");
+
+            let url = $(this).attr("storeorder_url"); 
+
+
+
+            $.ajax({
+                url: BASE_URL+'storeorder/store/index',
+                type: "POST",
+                data: {
+                       qty:qty,
+                       product_id:productId,
+                       isAjax : true
+                      },
+                cache: false,
+                success: function(response){
+                    if(response.status)
+                    {
+                        $(".addto-store-"+productId).find("span").html("Added");
+
+                        setTimeout(function(){ 
+
+                            $(".addto-store-"+productId).prop("disabled",false);
+
+                            $(".addto-store-"+productId).find("span").html("Add To Storeorder");
+
+                        }, 1000);
+
+                        $(".page.messages").html('<div role="alert" class="messages"><div class="message-success success message" data-ui-id="message-success"><div>You have added to your favorite product to <a href="'+url+'"> Store Order</a></div></div></div>');
+
+                    }else{
+
+                        alert("something went wrong!");
+                    }
+                }
+            });
+
+        });   
+
+        }
+
+        function sortProductsNameAscending() {
+            var products = $('.product-item');
+            products.sort(function (a, b) {
+
+
+                var nameA = $(a).data("name").toLowerCase(), nameB = $(b).data("name").toLowerCase();
+                var nameA = nameA.replace(/[^a-zA-Z]/g, '');
+                  console.log(nameA);
+                var nameB = nameB.replace(/[^a-zA-Z]/g, '');
+              console.log(nameB);                
+
+                if (nameA < nameB) //sort string ascending
+                    return -1;
+                if (nameA > nameB)
+                    return 1;
+                return 0;
+
+            });
+
+            $(".products-grid").html(products);
+             $("button#addto-store").on("click",function(e){
+
+            e.preventDefault();
+            
+            $(this).prop("disabled",true);
+
+            $(this).find("span").html("Adding");
+
+            let qty = 1;
+
+            let productId = $(this).attr("product_id");
+
+            let productName = $(this).attr("product_name");
+
+            let url = $(this).attr("storeorder_url"); 
+
+
+
+            $.ajax({
+                url: BASE_URL+'storeorder/store/index',
+                type: "POST",
+                data: {
+                       qty:qty,
+                       product_id:productId,
+                       isAjax : true
+                      },
+                cache: false,
+                success: function(response){
+                    if(response.status)
+                    {
+                        $(".addto-store-"+productId).find("span").html("Added");
+
+                        setTimeout(function(){ 
+
+                            $(".addto-store-"+productId).prop("disabled",false);
+
+                            $(".addto-store-"+productId).find("span").html("Add To Storeorder");
+
+                        }, 1000);
+
+                        $(".page.messages").html('<div role="alert" class="messages"><div class="message-success success message" data-ui-id="message-success"><div>You have added to your favorite product to <a href="'+url+'"> Store Order</a></div></div></div>');
+
+                    }else{
+
+                        alert("something went wrong!");
+                    }
+                }
+            });
+
+        });   
+        }
+
+        function sortProductsNameDescending() {
+            var products = $('.product-item');
+
+            products.sort(function (a, b) {
+
+
+                var nameA = $(b).data("name").toLowerCase(), nameB = $(a).data("name").toLowerCase();
+              var nameA = nameA.replace(/[^a-zA-Z]/g, '');
+                console.log(nameA);
+              var nameB = nameB.replace(/[^a-zA-Z]/g, '');
+                console.log(nameB);
+                if (nameA < nameB) //sort string ascending
+                    return -1;
+                if (nameA > nameB)
+                    return 1;
+                return 0;
+
+
+                //return $(b).data("name").toLowerCase()-$(a).data("name").toLowerCase();
+            });
+
+            $(".products-grid").html(products);
+             $("button#addto-store").on("click",function(e){
+
+            e.preventDefault();
+            
+            $(this).prop("disabled",true);
+
+            $(this).find("span").html("Adding");
+
+            let qty = 1;
+
+            let productId = $(this).attr("product_id");
+
+            let productName = $(this).attr("product_name");
+
+            let url = $(this).attr("storeorder_url"); 
+
+
+
+            $.ajax({
+                url: BASE_URL+'storeorder/store/index',
+                type: "POST",
+                data: {
+                       qty:qty,
+                       product_id:productId,
+                       isAjax : true
+                      },
+                cache: false,
+                success: function(response){
+                    if(response.status)
+                    {
+                        $(".addto-store-"+productId).find("span").html("Added");
+
+                        setTimeout(function(){ 
+
+                            $(".addto-store-"+productId).prop("disabled",false);
+
+                            $(".addto-store-"+productId).find("span").html("Add To Storeorder");
+
+                        }, 1000);
+
+                        $(".page.messages").html('<div role="alert" class="messages"><div class="message-success success message" data-ui-id="message-success"><div>You have added to your favorite product to <a href="'+url+'"> Store Order</a></div></div></div>');
+
+                    }else{
+
+                        alert("something went wrong!");
+                    }
+                }
+            });
+
+        });   
+
+        }
+
+    });
+</script>
+

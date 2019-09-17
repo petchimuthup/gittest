@@ -1,0 +1,19 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<head>
+  <link src="Tychons_StoreManager::css/fSelect.css"/>
+  <link src="Tychons_StoreManager::js/storeuser.js"/>
+  <link src="Tychons_StoreManager::js/fSelect.js"/>
+</head>  
+<update handle="customer_account"/> 
+<body>
+    <referenceBlock name="page.main.title"> 
+            <action method="setPageTitle"> 
+                <argument translate="true" name="title" xsi:type="string">Manage User</argument> 
+            </action> 
+     </referenceBlock> 
+     <referenceContainer name="content"> 
+        <block class="Tychons\StoreManager\Block\User\Store" name="store_user" template="Tychons_StoreManager::store/user.phtml" cacheable="false"> 
+        </block> 
+    </referenceContainer> 
+</body> 
+</page>

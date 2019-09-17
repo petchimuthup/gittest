@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="GetCreditDocument" frontName="GetCreditDocument">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetStatementDocument" frontName="GetStatementDocument">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetInvoiceDocument" frontName="GetInvoiceDocument">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetPurchaseHistory" frontName="GetPurchaseHistory">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetOrderHeader" frontName="GetOrderHeader">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetOrderDetail" frontName="GetOrderDetail">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetInvoiceHeader" frontName="GetInvoiceHeader">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetInvoiceDetail" frontName="GetInvoiceDetail">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetCreditHeader" frontName="GetCreditHeader">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetCreditDetail" frontName="GetCreditDetail">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="Statements" frontName="Statements">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetBackorderSummary" frontName="GetBackorderSummary">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetPurchaseDetail" frontName="GetPurchaseDetail">
+            <module name="ISN_Integration"/>
+        </route>
+        <route id="GetPurchaseSummary" frontName="GetPurchaseSummary">
+            <module name="ISN_Integration"/>
+        </route>
+    </router>
+</config>

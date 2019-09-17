@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/new"/>
+                <class>primary</class>
+                <label translate="true">Add New Store</label>
+            </button>
+        </buttons>
+    </settings>
+    <columns name="company_columns">
+        <column name="company_name" sortOrder="30">
+            <settings>
+                <filter>text</filter>
+                <editor>
+                    <editorType>text</editorType>
+                </editor>
+                <label translate="true">Store Name</label>
+            </settings>
+        </column>
+        <column name="company_email" sortOrder="60">
+            <settings>
+                <filter>text</filter>
+                <editor>
+                    <editorType>text</editorType>
+                </editor>
+                <label translate="true">Store Email</label>
+            </settings>
+        </column>
+        <column name="company_admin" sortOrder="190">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Store Admin</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="customer_number" sortOrder="40">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Customer Number</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="customer_price_group" sortOrder="50">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Customer Price Group</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="customer_group" sortOrder="30">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Customer Group</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+    </columns>
+</listing>

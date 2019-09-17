@@ -1,0 +1,22 @@
+{
+    "name": "tychons/module-storemanager",
+    "description": "This extension is used to manage store based on user login",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Tychons\\StoreManager\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

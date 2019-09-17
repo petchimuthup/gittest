@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="integration" translate="label" sortOrder="10">
+            <label>Integration Config</label>
+        </tab>
+        <section id="order_history" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Order History</label>
+            <tab>integration</tab>
+            <resource>ISN_Integration::integration_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="ORDER_HEADER_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>ORDER_HEADER_ENDPOINT</label>
+                </field>
+                <field id="ORDER_DETAIL_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>ORDER_DETAIL_ENDPOINT</label>
+                </field>
+                <field id="INVOICEH_HEADER_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>INVOICEH_EADER_ENDPOINT</label>
+                </field>
+                <field id="INVOICE_DETAIL_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>INVOICE_DETAIL_ENDPOINT</label>
+                </field>
+                <field id="CREDIT_HEADER_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>CREDIT_HEADER_ENDPOINT</label>
+                </field>
+                <field id="CREDIT_DETAIL_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>CREDIT_DETAIL_ENDPOINT</label>
+                </field>
+                <field id="STATEMENTS_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>STATEMENTS_ENDPOINT</label>
+                </field>
+                <field id="BACKORDER_SUMMARY_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>BACKORDER_SUMMARY_ENDPOINT</label>
+                </field>
+                <field id="PURCHASE_DETAIL_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>PURCHASE_DETAIL_ENDPOINT</label>
+                </field>
+                <field id="PURCHASE_SUMMARY_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>PURCHASE_SUMMARY_ENDPOINT</label>
+                </field>
+                <field id="WEBSERVICE_PORT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>WEBSERVICE_PORT</label>
+                </field>
+            </group>
+        </section>
+        <section id="crystal_report" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Crystal Report</label>
+            <tab>integration</tab>
+            <resource>ISN_Integration::integration_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="CREDIT_DOCUMENT_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>CREDIT_DOCUMENT_ENDPOINT</label>
+                </field>
+                <field id="STATEMENT_DOCUMENT_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>STATEMENT_DOCUMENT_ENDPOINT</label>
+                </field>
+                <field id="INVOICE_DOCUMENT_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>INVOICE_DOCUMENT_ENDPOINT</label>
+                </field>
+                <field id="CRYSTAL_ENDPOINT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>CRYSTAL_ENDPOINT</label>
+                </field>
+                <field id="CRYSTAL_PASSWORD" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>CRYSTAL_PASSWORD</label>
+                </field>
+                <field id="CRYSTAL_USER" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>CRYSTAL_USER</label>
+                </field>
+                <field id="CRYSTAL_CREDIT_DOCUMENT_ID" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>CRYSTAL_CREDIT_DOCUMENT_ID</label>
+                </field>
+                <field id="CRYSTAL_STATEMENT_DOCUMENT_ID" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>CRYSTAL_STATEMENT_DOCUMENT_ID</label>
+                </field>
+                <field id="CRYSTAL_INVOICE_DOCUMENT_ID" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>CRYSTAL_INVOICE_DOCUMENT_ID</label>
+                </field>
+                <field id="CRYSTAL_PORT" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>CRYSTAL_PORT</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

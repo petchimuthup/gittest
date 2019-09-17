@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Magento\Company\Controller\Adminhtml\Index\Edit" type="Tychons\StoreManager\Controller\Adminhtml\Index\CompanyEdit" />
+	<preference for="Magento\Customer\Controller\Account\EditPost" type="Tychons\StoreManager\Controller\Account\EditPost" />
+	<preference for="Magento\Company\Controller\Adminhtml\Index\NewAction" type="Tychons\StoreManager\Controller\Adminhtml\Index\NewAction" />
+	<preference for="Magento\Company\Controller\Adminhtml\Index\Index" type="Tychons\StoreManager\Controller\Adminhtml\Index\CompanyTitle" />
+	<preference for="Magento\Customer\Block\Adminhtml\Edit\SaveButton" type="Tychons\StoreManager\Block\Adminhtml\Edit\SaveButton" />
+	<preference for="Magento\Customer\Controller\Adminhtml\Index\Edit" type="Tychons\StoreManager\Controller\Adminhtml\Index\Edit" />
+	<preference for="Magento\Customer\Controller\Adminhtml\Index\Index" type="Tychons\StoreManager\Controller\Adminhtml\Index\Index" />
+	<virtualType name="Tychons\StoreManager\Model\ResourceModel\Company\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">company_user</argument>
+			<argument name="resourceModel" xsi:type="string">Magento\Customer\Model\ResourceModel\Customer\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="companyuser_company_listing_data_source" xsi:type="string">Magento\Customer\Model\ResourceModel\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+	<virtualType name="Tychons\StoreManager\Model\ResourceModel\StoreSelect\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">user_store_select</argument>
+			<argument name="resourceModel" xsi:type="string">Tychons\StoreManager\Model\ResourceModel\StoreSelect\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="tychons_storemanager_storeselect_listing_data_source" xsi:type="string">Tychons\StoreManager\Model\ResourceModel\StoreSelect\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+	<type name="Magento\Company\Model\Company\DataProvider">
+        <plugin name="company_ui_form_dataprovider" type="Tychons\StoreManager\Plugin\Company\DataProvider"/>
+    </type>
+    <type name="Magento\Company\Controller\Adminhtml\Index\Save">
+        <plugin name="company_ui_form_save" type="Tychons\StoreManager\Plugin\Company\Save"/>
+    </type>
+    <preference for="Magento\Company\Model\ResourceModel\Company\Grid\Collection" type="Tychons\StoreManager\Plugin\Company\Collection" />
+</config>

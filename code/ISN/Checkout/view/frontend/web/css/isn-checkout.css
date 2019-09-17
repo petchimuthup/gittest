@@ -1,0 +1,50 @@
+.page-layout-checkout .opc-progress-bar li.shopping-cart::after {
+	margin-left: 16px !important;
+}
+
+span.shopping-cart-icon::before {
+	webkit-font-smoothing: antialiased;
+	mox-osx-font-smoothing: greyscale;
+	font-size: 18px;
+	line-height: 20px;
+	color: #757575;
+	content: '\f291' !important;
+	font-family: 'FontAwesome';
+	vertical-align: middle;
+	display: inline-block !important;
+	font-weight: normal;
+	overflow: hidden;
+	speak: none;
+	text-align: left;
+	background: inherit !important;
+	border: none !important;
+	border-radius: 0 !important;
+}
+
+
+
+.return-to-cart {
+	cursor: pointer;
+}
+/*
+.return-to-cart span {
+	color: #006BB4;
+}
+*/
+.return-to-cart span.return-icon::before {
+	webkit-font-smoothing: antialiased;
+	mox-osx-font-smoothing: greyscale;
+	font-size: 16x;
+	line-height: 18px;
+	color: inherit;
+	content: '\f100';
+	font-family: 'FontAwesome';
+	vertical-align: middle;
+	display: inline-block;
+	font-weight: normal;
+	overflow: hidden;
+	speak: none;
+	text-align: center;
+	margin-right: 6px;
+}
+

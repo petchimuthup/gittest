@@ -1,0 +1,16 @@
+<div>
+    <form id="purchase-order-form" class="form" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
+        <label for="po_number" class="label">
+            <span><!-- ko i18n: 'Purchase Order Number'--><!-- /ko --></span>
+        </label>
+        <div class="control">
+            <input type="text"
+                   id="poNumber"
+                   name="po_number"
+                   data-validate="{required:true}"
+                   data-bind=' attr: {title: $t("Purchase Order Number")}'
+                   class="input-text"/>
+        </div>
+
+    </form>
+</div>
